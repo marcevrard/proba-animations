@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Probability: interactive animations</title>
+  <!-- Landing page of resources/animations/, maintained by hand: one section
+       per animation folder (GitHub Pages serves it as the site's home). -->
+  <style>
+    body {max-width: 680px; margin: 48px auto; padding: 0 20px;
+      font-family: Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif;
+      color: #242424; line-height: 1.5;}
+    h1 {font-size: 28px; font-weight: normal; margin-bottom: 4px;}
+    h2 {font-size: 22px; font-weight: normal; margin: 36px 0 4px;}
+    .lead {color: #555; margin-top: 0;}
+    a.card {display: block; margin: 18px 0; padding: 16px 20px;
+      border: 1px solid #ddd; border-left: 6px solid #1f77b4;
+      border-radius: 8px; color: inherit; text-decoration: none;}
+    a.card:hover {background: #f6f9fc;}
+    a.card strong {font-size: 19px; font-weight: normal; color: #1f77b4;}
+    a.card span {display: block; color: #555;}
+  </style>
+</head>
+<body>
+  <h1>Probability: interactive animations</h1>
+  <p class="lead">Play, pause, or drag the slider; each animation has its own
+  options.</p>
+
+  <section>
+    <h2>Universality of the uniform</h2>
+    <p class="lead">Equally spaced quantiles projected through a quantile
+    function or a CDF. Choose the quantiles, the mode and the unit.</p>
+    <a class="card" href="uniform-universality/quantile.html">
+      <strong><i>X</i> = <i>F</i><sup>−1</sup>(<i>U</i>)</strong>
+      <span><i>U</i> ∼ Unif(0, 1) through the quantile function of
+      <i>X</i> ∼ 𝒩(0, 1): the points gather where the density is high.</span>
+    </a>
+    <a class="card" href="uniform-universality/cdf.html">
+      <strong><i>F</i>(<i>X</i>) ∼ Unif(0, 1)</strong>
+      <span><i>X</i> ∼ 𝒩(0, 1) through its own CDF: the points spread
+      evenly over (0, 1).</span>
+    </a>
+  </section>
+</body>
+</html>
