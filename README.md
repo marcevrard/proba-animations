@@ -27,12 +27,37 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   The curve is dashed outside the support of $X$, where the CDF is flat at 0 or 1.
   Add `#quantile` or `#cdf` to the URL to choose the starting direction.
 
+- **[Memoryless property](https://marcevrard.github.io/proba-animations/memoryless/memoryless.html)**
+
+  This page shows the memoryless property of $X \sim \mathrm{Exp}(\lambda)$, $P(X \ge s + t \mid X \ge s) = P(X \ge t)$.
+  After waiting $s$, the density of the remaining time is the density of $X$ again, whatever $s$.
+  Press play to let $s$ grow, or drag $s$ and $t$ along the axes.
+  A toggle replaces the densities with the survival functions, $S_X(x) = P(X \ge x)$, so that probabilities become heights.
+  For comparison, switch to the Weibull distribution, in the form $P(X \ge x) = e^{-\lambda x^\gamma}$.
+  It has less time left for $\gamma > 1$ (wear) and more for $\gamma < 1$ (survival of the fittest).
+  Another toggle shows the hazard rate, which is flat for the exponential distribution because it does not age.
+  Add `#exp` or `#weibull` to the URL to choose the starting distribution.
+
+- **[Memoryless property: raindrops](https://marcevrard.github.io/proba-animations/raindrops/raindrops.html)**
+
+  This page shows the same property with a simulated shower.
+  Each tile of a pavement gets drops at rate $\lambda$, so its wait for the first drop follows $\mathrm{Exp}(\lambda)$.
+  The time already waited, $s$, changes how many tiles are still dry, but not the law of their remaining wait.
+  A table compares the tiles still dry at $s$ with all tiles: the same share gets its drop within one second, and the mean wait is $1/\lambda$ for both.
+  Three views show it: the histograms of the waits, the share still dry $t$ later, and the mean wait against $s$.
+  The statistics use 100,000 simulated tiles, of which 1,600 are drawn.
+
 ## Using the pages
 
 - In the PDF and CDF page, drag the dots on the axes.
 
 - In the universality animation, play, pause, or drag the slider.
   The space bar also plays or pauses.
+
+- In the memoryless page, press play or drag the dots on the axes.
+
+- In the raindrops page, move the slider for $s$.
+  Press play to watch the shower in real time, or draw a new one.
 
 - The pages work offline.
   Download or clone the repo and open `index.html` in a browser.
