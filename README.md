@@ -7,17 +7,31 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
 
 ## Animations
 
+- **[PDF and CDF](https://marcevrard.github.io/proba-animations/pdf-cdf/pdf-cdf.html)**
+
+  This page shows that $F_X(x) = P(X \le x)$ is the area under the PDF up to $x$ and the height of the CDF at $x$.
+  You can drag $x$ along the axis of the PDF or of the CDF, or drag a probability along the axis of the CDF.
+  A toggle switches to an interval, $P(x_1 < X \le x_2) = F_X(x_2) - F_X(x_1)$.
+  $X$ follows a normal, logistic, exponential, or uniform distribution, and sliders set its parameters.
+  The page shows its PDF, CDF, and quantile function.
+  A zoom on $x$ helps with narrow densities.
+  Add `#norm`, `#logis`, `#expon`, or `#unif` to the URL to choose the starting distribution.
+
 - **[Universality of the uniform](https://marcevrard.github.io/proba-animations/uniform-universality/universality.html)**
 
   This animation shows both directions of the theorem, $X = F^{-1}(U)$ and $F(X) \sim \mathrm{Unif}(0, 1)$.
   Quantiles of $U$ are projected through the quantile function of $X$ and gather where its density is high.
   In the other direction, the same points are projected through the CDF and spread evenly over $(0, 1)$.
-  You can choose the distribution of $X$ (normal, logistic, exponential, or uniform), the number of quantiles, the mode (all at once or random order), and the unit.
+  You can choose the distribution of $X$: $\mathcal{N}(0, 1)$, $\mathrm{Logistic}(0, 1)$, $\mathrm{Exp}(1)$, or $\mathrm{Unif}(-2, 2)$.
+  You can also choose the number of quantiles, the mode (all at once or random order), and the unit.
+  The curve is dashed outside the support of $X$, where the CDF is flat at 0 or 1.
   Add `#quantile` or `#cdf` to the URL to choose the starting direction.
 
 ## Using the pages
 
-- Play, pause, or drag the slider.
+- In the PDF and CDF page, drag the dots on the axes.
+
+- In the universality animation, play, pause, or drag the slider.
   The space bar also plays or pauses.
 
 - The pages work offline.
