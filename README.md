@@ -45,7 +45,10 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   The time already waited, $s$, changes how many tiles are still dry, but not the law of their remaining wait.
   A table compares the tiles still dry at $s$ with all tiles: the same share gets its drop within one second, and the mean wait is $1/\lambda$ for both.
   Three views show it: the histograms of the waits, the share still dry $t$ later, and the mean wait against $s$.
-  The statistics use 100,000 simulated tiles, of which 1,600 are drawn.
+  The number of tiles ranges from 4 to 100,000 (the default).
+  With few tiles, the statistics are noisy.
+  As the number grows, the mean wait against $s$ flattens to $1/\lambda$.
+  The pavement shows every tile up to $40 \times 40$, and a $40 \times 40$ part beyond.
 
 ## Using the pages
 
@@ -56,7 +59,7 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
 
 - In the memoryless page, press play or drag the dots on the axes.
 
-- In the raindrops page, move the slider for $s$.
+- In the raindrops page, move the slider for $s$ and choose the number of tiles.
   Press play to watch the shower in real time, or draw a new one.
 
 - The pages work offline.
