@@ -26,6 +26,16 @@ The site follows the course, Modules 1 to 5.
   One view plots the probabilities against $n$ with simulated draws, the other shows the formula converge term by term.
   Montmort's card game (1708) is the same problem.
 
+### Module 2: Conditional probability
+
+- **[Screening for a rare disease](https://marcevrard.github.io/proba-animations/module2/screening/screening.html)**
+
+  This page shows why a positive test for a rare disease often means that the person is healthy.
+  Sliders set the prior (how rare the disease is), the sensitivity and the specificity of the test, and a list sets the population size.
+  A tree of natural frequencies and the confusion matrix show who tests positive: with a 1% prior and a 95% test, only 95 of the 590 positives are sick, so $P(D \mid T) \approx 16\%$, while $P(T \mid D) = 95\%$.
+  A curve shows how $P(D \mid T)$ falls as the disease gets rarer.
+  The counts can be expected values or random counts, and retesting the positives updates the prior with Bayes' theorem.
+
 ### Module 4: Continuous random variables
 
 - **[PDF and CDF](https://marcevrard.github.io/proba-animations/module4/pdf-cdf/pdf-cdf.html)**
@@ -80,6 +90,8 @@ The site follows the course, Modules 1 to 5.
 - In the birthday page, drag $n$ along the axis or press play, and draw a new class.
 
 - In the Secret Santa page, drag $n$ along the axis, press play to watch the draws, or add 1,000 draws at once.
+
+- In the screening page, move the sliders, choose the population size, and retest the positives.
 
 - In the PDF and CDF page, drag the dots on the axes.
 

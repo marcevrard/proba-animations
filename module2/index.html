@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 2: Conditional probability</title>
+  <!-- Page of Module 2 (ch2), maintained by hand: one section per animation
+       folder of module2/. The site's home is ../index.html. -->
+  <style>
+    body {max-width: 680px; margin: 48px auto; padding: 0 20px;
+      font-family: Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif;
+      color: #242424; line-height: 1.5;}
+    h1 {font-size: 28px; font-weight: normal; margin-bottom: 4px;}
+    h2 {font-size: 22px; font-weight: normal; margin: 36px 0 4px;}
+    .lead {color: #555; margin-top: 0;}
+    a.card {display: block; margin: 18px 0; padding: 16px 20px;
+      border: 1px solid #ddd; border-left: 6px solid #1f77b4;
+      border-radius: 8px; color: inherit; text-decoration: none;}
+    a.card:hover {background: #f6f9fc;}
+    a.card strong {font-size: 19px; font-weight: normal; color: #1f77b4;}
+    a.card span {display: block; color: #555;}
+    .back {font-size: 15px; color: #1f77b4; text-decoration: none;}
+    .back:hover {text-decoration: underline;}
+  </style>
+</head>
+<body>
+  <a class="back" href="../index.html">← All modules</a>
+  <h1>Module 2: Conditional probability</h1>
+  <p class="lead">Set the values with the sliders; each animation has its
+  own options.</p>
+
+  <section>
+    <h2>Screening for a rare disease</h2>
+    <a class="card" href="screening/screening.html">
+      <strong><i>P</i>(sick | positive test) ≠ <i>P</i>(positive test | sick)</strong>
+      <span>Set the population size, the prior (how rare the disease is),
+      and the test's sensitivity and specificity. A tree of natural
+      frequencies and the confusion matrix show who tests positive: with a
+      1% prior and a 95% test, only 95 of 590 positives are sick (16%).
+      A curve shows how <i>P</i>(sick | positive) collapses as the disease
+      gets rarer. Draw a random population, or retest the positives to
+      update the prior with Bayes' theorem.</span>
+    </a>
+  </section>
+</body>
+</html>

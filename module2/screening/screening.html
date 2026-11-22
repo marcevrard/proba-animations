@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Screening for a rare disease</title>
+    <style>html, body {height: 100%;}</style>
+</head>
+<body>
+    <div style="height:620px; width:720px;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="../../plotly.min.js"></script>                <div id="screening" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("screening")) {                    Plotly.newPlot(                        "screening",                        [{"hoverinfo":"skip","line":{"color":"#7f7f7f","width":1.4},"mode":"lines","showlegend":false,"x":[0.08,0.46,null,0.08,0.46,null,0.46,0.88,null,0.46,0.88,null,0.46,0.88,null,0.46,0.88,null],"y":[0.5,0.76,null,0.5,0.24,null,0.76,0.92,null,0.76,0.62,null,0.24,0.38,null,0.24,0.08,null],"type":"scatter","xaxis":"x","yaxis":"y"},{"colorscale":[[0.0,"#f4f4f4"],[0.3333333333333333,"#f4f4f4"],[0.3333333333333333,"#fff1a8"],[0.6666666666666666,"#fff1a8"],[0.6666666666666666,"#ffd8b5"],[1.0,"#ffd8b5"]],"hoverinfo":"skip","showscale":false,"text":[["","",""],["","",""],["","",""]],"textfont":{"size":12},"texttemplate":"%{text}","visible":true,"x":[0,1,2],"xgap":2,"y":[0,1,2],"ygap":2,"z":[[1,0,2],[0,0,0],[1,0,2]],"zmax":2.5,"zmin":-0.5,"type":"heatmap","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","line":{"color":"#1f77b4","width":2.2},"mode":"lines","name":"\u003ci\u003eP\u003c\u002fi\u003e(\u003ci\u003eD\u003c\u002fi\u003e | \u003ci\u003eT\u003c\u002fi\u003e), positive test","visible":false,"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","line":{"color":"#7f7f7f","dash":"dash","width":1.8},"mode":"lines","name":"\u003ci\u003eP\u003c\u002fi\u003e(\u00ac\u003ci\u003eD\u003c\u002fi\u003e | \u00ac\u003ci\u003eT\u003c\u002fi\u003e), negative test","visible":false,"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","marker":{"color":"#ff7f0e","line":{"color":"white","width":1.5},"size":10},"mode":"markers","showlegend":false,"visible":false,"type":"scatter","xaxis":"x2","yaxis":"y2"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,0.432258064516129],"fixedrange":true,"mirror":true,"showline":true,"ticks":"outside","showgrid":true,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"linear","tick0":0,"range":[0,1],"visible":false},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"mirror":true,"showline":true,"ticks":"outside","showgrid":true,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"linear","tick0":0,"range":[0,1],"visible":false},"xaxis2":{"anchor":"y2","domain":[0.567741935483871,1.0],"fixedrange":true,"mirror":true,"showline":true,"ticks":"","showgrid":false,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"array","tick0":0,"title":{"standoff":6,"text":""},"type":"linear","range":[-0.5,2.5],"tickvals":[0,1,2],"ticktext":["Positive","Negative","\u003cb\u003eTotal\u003c\u002fb\u003e"],"side":"bottom"},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"fixedrange":true,"mirror":true,"showline":true,"ticks":"","showgrid":false,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"array","tick0":0,"range":[-0.5,2.5],"tickvals":[0,1,2],"ticktext":["\u003cb\u003eTotal\u003c\u002fb\u003e","Healthy","Sick"]},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Test 1: $n people","x":0.2161290322580645,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Confusion matrix","x":0.7838709677419355,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"align":"center","font":{"size":12},"showarrow":false,"text":"\u003ci\u003eP\u003c\u002fi\u003e","width":42,"x":0.567741935483871,"xanchor":"right","xref":"paper","xshift":-29,"y":0.5,"yanchor":"bottom","yref":"paper","yshift":3.0,"visible":false},{"align":"center","font":{"size":12},"showarrow":false,"text":"[\u2013]","width":42,"x":0.567741935483871,"xanchor":"right","xref":"paper","xshift":-29,"y":0.5,"yanchor":"top","yref":"paper","yshift":-3.0,"visible":false},{"bgcolor":"#f4f4f4","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.08,"xref":"x","y":0.5,"yref":"y"},{"bgcolor":"#f4f4f4","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.46,"xref":"x","y":0.76,"yref":"y"},{"bgcolor":"#f4f4f4","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.46,"xref":"x","y":0.24,"yref":"y"},{"bgcolor":"#fff1a8","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.88,"xref":"x","y":0.92,"yref":"y"},{"bgcolor":"#f4f4f4","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.88,"xref":"x","y":0.62,"yref":"y"},{"bgcolor":"#fff1a8","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.88,"xref":"x","y":0.38,"yref":"y"},{"bgcolor":"#f4f4f4","bordercolor":"#7f7f7f","borderpad":3,"borderwidth":1,"font":{"size":12},"showarrow":false,"text":"","x":0.88,"xref":"x","y":0.08,"yref":"y"},{"font":{"color":"#7f7f7f","size":11},"showarrow":false,"text":"","x":0.27,"xref":"x","y":0.63,"yref":"y","yshift":9},{"font":{"color":"#7f7f7f","size":11},"showarrow":false,"text":"","x":0.27,"xref":"x","y":0.37,"yref":"y","yshift":-9},{"font":{"color":"#7f7f7f","size":11},"showarrow":false,"text":"","x":0.67,"xref":"x","y":0.8400000000000001,"yref":"y","yshift":9},{"font":{"color":"#7f7f7f","size":11},"showarrow":false,"text":"","x":0.67,"xref":"x","y":0.69,"yref":"y","yshift":-9},{"font":{"color":"#7f7f7f","size":11},"showarrow":false,"text":"","x":0.67,"xref":"x","y":0.31,"yref":"y","yshift":9},{"font":{"color":"#7f7f7f","size":11},"showarrow":false,"text":"","x":0.67,"xref":"x","y":0.16,"yref":"y","yshift":-9}],"shapes":[{"line":{"color":"#242424","width":1.5},"type":"rect","x0":-0.46,"x1":0.46,"xref":"x2","y0":1.56,"y1":2.44,"yref":"y2","visible":true},{"line":{"color":"#242424","width":1.5},"type":"rect","x0":1.54,"x1":2.46,"xref":"x2","y0":1.56,"y1":2.44,"yref":"y2","visible":true}],"margin":{"l":76,"r":24,"b":116,"t":264},"font":{"family":"Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif","size":12},"title":{"subtitle":{"text":"A positive test for a rare disease: how likely is it that the person is sick? (Bayes' theorem)"},"text":"Screening for a rare disease","x":0.02,"yref":"container","y":0.9741935483870968,"yanchor":"top"},"width":720,"height":620,"showlegend":true,"hovermode":false,"legend":{"font":{"size":12},"x":1.0,"y":0.02,"xanchor":"right","yanchor":"bottom","bgcolor":"rgba(255, 255, 255, 0.85)","itemclick":false,"itemdoubleclick":false}},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById("screening");
+var LAWS = {"test":{"order":null,"axes":[{}],"formulas":"<span><i>P</i>(<i>D</i> | <i>T</i>) = <i>P</i>(<i>T</i> | <i>D</i>) <i>P</i>(<i>D</i>) / [<i>P</i>(<i>T</i> | <i>D</i>) <i>P</i>(<i>D</i>) + <i>P</i>(<i>T</i> | ¬<i>D</i>) <i>P</i>(¬<i>D</i>)]</span><span><i>P</i>(¬<i>D</i> | ¬<i>T</i>) = <i>P</i>(¬<i>T</i> | ¬<i>D</i>) <i>P</i>(¬<i>D</i>) / [<i>P</i>(¬<i>T</i> | ¬<i>D</i>) <i>P</i>(¬<i>D</i>) + <i>P</i>(¬<i>T</i> | <i>D</i>) <i>P</i>(<i>D</i>)]</span>"}}, LAYOUTS = {"wide":{"width":720,"height":620,"relayout":{"annotations[0].x":0.2161290322580645,"annotations[1].x":0.7838709677419355,"annotations[1].y":1.0,"annotations[2].x":0.567741935483871,"annotations[2].y":0.5,"annotations[3].x":0.567741935483871,"annotations[3].y":0.5,"height":620,"margin.b":116,"margin.t":264,"title.subtitle.text":"A positive test for a rare disease: how likely is it that the person is sick? (Bayes' theorem)","title.y":0.9741935483870968,"width":720,"xaxis.domain":[0.0,0.432258064516129],"xaxis2.domain":[0.567741935483871,1.0],"yaxis.domain":[0.0,1.0],"yaxis2.domain":[0.0,1.0]},"header":"left:76px;top:80px;width:628px","footer":"left:0px;top:552px;width:720px","tracks":{}},"tall":{"width":432,"height":1018,"relayout":{"annotations[0].x":0.5,"annotations[1].x":0.5,"annotations[1].y":0.4230769230769231,"annotations[2].x":0.0,"annotations[2].y":0.21153846153846154,"annotations[3].x":0.0,"annotations[3].y":0.21153846153846154,"height":1018,"margin.b":148,"margin.t":350,"title.subtitle.text":"A positive test for a rare disease: how likely is it that<br>the person is sick? (Bayes' theorem)","title.y":0.9842829076620825,"width":432,"xaxis.domain":[0.0,1.0],"xaxis2.domain":[0.0,1.0],"yaxis.domain":[0.5769230769230769,1.0],"yaxis2.domain":[0.0,0.4230769230769231]},"header":"left:16px;top:96px;width:400px","footer":"left:0px;top:918px;width:432px","tracks":{}}}, UNIT_TITLES = {};
+var TRACK_PAD = 10;
+var state = {"dist": "test", "layout": null, "zoom": 0, "pop": 10000, "mode": 0, "view": 0, "params": {"test": {"prior": 1, "sens": 95, "spec": 95}}}, tracks = [];
+
+function clamp(lo, hi) {
+  return function (v) { return Math.min(Math.max(v, lo), hi); };
+}
+// A number with d decimals, with a minus sign (and no "-0")
+function fmt(v, d) {
+  var s = v.toFixed(d);
+  if (Number(s) === 0) { s = (0).toFixed(d); }
+  return s.replace("-", "−");
+}
+// Buttons of a toggle (one pressed, by value), calling onchange(value)
+function toggle(buttons, value, onchange) {
+  buttons.forEach(function (btn) {
+    btn.setAttribute("aria-pressed", Number(btn.value) === value);
+    btn.addEventListener("click", function () {
+      if (btn.getAttribute("aria-pressed") === "true") { return; }
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn); });
+      onchange(Number(btn.value));
+    });
+  });
+}
+
+var style = document.createElement("style");
+style.textContent = "\n.anim-header, .anim-track, .anim-footer {position: absolute; z-index: 10;\n  box-sizing: border-box; font-family: Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif; color: #242424;}\n.anim-header {display: flex; flex-direction: column; gap: 8px; font-size: 12px;\n  line-height: 1.35;}\n.anim-header sub, .anim-header sup {line-height: 0;}\n.anim-row {display: flex; align-items: center; gap: 18px; white-space: nowrap;}\n.anim-select {height: 26px; padding: 0 8px; font: inherit;\n  border: 1px solid #b8b8b8; border-radius: 6px; background: white;\n  color: inherit; cursor: pointer;}\n.anim-dist, .anim-unit, .anim-param {display: flex; align-items: center; gap: 8px;}\n.anim-dist select {width: 108px;}\n.anim-unit select {width: 60px;}\n.anim-group {display: flex; gap: 18px;}\n.anim-group[hidden] {display: none;}\n.anim-params {display: flex; align-items: center; gap: 10px;}\n.anim-param input {width: 68px; margin: 0; accent-color: #1f77b4; cursor: pointer;}\n.anim-param output {min-width: 46px;}\n.anim-reset, .anim-btn {flex: none; width: 24px; height: 24px; border: none;\n  border-radius: 50%; padding: 0; display: flex; align-items: center;\n  justify-content: center; background: #1f77b4; color: white;\n  font-family: sans-serif; font-size: 15px; cursor: pointer;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);}\n.anim-reset:hover, .anim-btn:hover {filter: brightness(0.88);}\n.anim-reset:active, .anim-btn:active {filter: brightness(0.75);}\n.anim-formulas, .anim-readout {display: flex; flex-wrap: wrap; column-gap: 18px;\n  row-gap: 2px; white-space: nowrap;}\n.anim-readout {column-gap: 5px;}\n.anim-readout b {color: #ff7f0e;}\n.tall .anim-row {flex-wrap: wrap; row-gap: 8px;}\n.tall .anim-params {order: 1; flex-basis: 100%;}\n.anim-track {touch-action: none; cursor: pointer;}\n.anim-bar {position: absolute; background: #ff7f0e; border-radius: 2px;\n  pointer-events: none;}\n.anim-track:not(.anim-vertical) .anim-bar {top: calc(50% - 2px); height: 4px;}\n.anim-vertical .anim-bar {left: calc(50% - 2px); width: 4px;}\n.anim-dot {position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px;\n  box-sizing: border-box; border-radius: 50%; background: #ff7f0e;\n  border: 2px solid white; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); cursor: grab;}\n.anim-track:not(.anim-vertical) .anim-dot {top: 50%;}\n.anim-vertical .anim-dot {left: 50%;}\n.anim-dot[data-tag]::after {content: attr(data-tag); position: absolute;\n  bottom: 15px; left: 50%; transform: translateX(-50%); font-size: 12px;\n  font-style: italic; color: #b35a00; white-space: nowrap; pointer-events: none;}\n.anim-footer {display: flex; flex-wrap: wrap; justify-content: center;\n  align-items: center; column-gap: 22px; row-gap: 6px; font-size: 12px;\n  white-space: nowrap;}\n.anim-footer > * {min-height: 26px; display: flex; align-items: center; gap: 8px;}\n.anim-toggle {display: flex; border: 1px solid #b8b8b8; border-radius: 6px;\n  overflow: hidden;}\n.anim-toggle button {min-width: 40px; height: 24px; border: none; padding: 0 10px;\n  font: inherit; color: inherit; background: white; cursor: pointer;}\n.anim-toggle button + button {border-left: 1px solid #b8b8b8;}\n.anim-toggle button:hover {background: #f0f0f0;}\n.anim-toggle button[aria-pressed=\"true\"] {background: #1f77b4; color: white;}\n.anim-hint {color: #6b6b6b;}\n.anim-footer > .anim-hint {display: block; min-height: 0;}\n.anim-footer > .anim-note {display: block; flex-basis: 100%; min-height: 0;\n  font-size: 11px; line-height: 1.2; color: #6b6b6b; white-space: normal;\n  text-align: center;}\n.anim-footer > .anim-note[hidden] {display: none;}\n.anim-note sub, .anim-note sup {line-height: 0;}\n.anim-math {white-space: nowrap;}\n.anim-header :focus-visible, .anim-footer :focus-visible,\n.anim-dot:focus-visible {outline: 2px solid #1f77b4;\n  outline-offset: 2px;}\n\n.anim-new, .anim-retest {height: 26px; padding: 0 10px; font: inherit;\n  color: inherit; background: white; border: 1px solid #b8b8b8;\n  border-radius: 6px; cursor: pointer;}\n.anim-new:hover, .anim-retest:hover {background: #f0f0f0;}\n.anim-new[disabled] {opacity: 0.4; cursor: default;}\n.anim-row {flex-wrap: wrap; row-gap: 8px;}\n.anim-params {order: 1; flex-basis: 100%;}\n.anim-group {flex-wrap: wrap; row-gap: 8px;}\n.anim-param input {width: 60px;}\n.anim-param output {min-width: 36px;}\n.anim-pop {display: flex; align-items: center; gap: 8px;}\n.anim-pop select {width: 92px;}\n.anim-readout > * {flex-basis: 100%; white-space: normal;}\n.anim-readout b.anim-ref {color: #7f7f7f;}\n.anim-formulas > * {white-space: normal;}\n";
+document.head.appendChild(style);
+gd.style.position = "relative";
+
+// Header: law, parameters, unit of x; formulas; readout. Footer: toggles and
+// hint.
+var header = document.createElement("div");
+header.className = "anim-header";
+header.innerHTML = "<div class=\"anim-row\"><label class=\"anim-dist\"><select class=\"anim-select\" style=\"display:none\"><option value=\"test\">Screening test</option></select><span>Screening test</span></label><div class=\"anim-params\"><div class=\"anim-group\" data-dist=\"test\" hidden><label class=\"anim-param\"><span>Prior %</span><input type=\"range\" min=\"0.1\" max=\"50\" step=\"0.1\" value=\"1\" data-key=\"prior\" data-unit=\"\"><output></output></label><label class=\"anim-param\"><span>Sensitivity %</span><input type=\"range\" min=\"50\" max=\"100\" step=\"0.1\" value=\"95\" data-key=\"sens\" data-unit=\"\"><output></output></label><label class=\"anim-param\"><span>Specificity %</span><input type=\"range\" min=\"50\" max=\"100\" step=\"0.1\" value=\"95\" data-key=\"spec\" data-unit=\"\"><output></output></label></div><button type=\"button\" class=\"anim-reset\" title=\"Default parameters\" aria-label=\"Default parameters\">↺</button></div><label class=\"anim-unit\" style=\"display:none\">Unit of N<select class=\"anim-select\"><option>people</option></select></label></div><div class=\"anim-formulas\"></div><div class=\"anim-readout\" aria-live=\"polite\"></div>";
+gd.appendChild(header);
+var distList = header.querySelector(".anim-dist select");
+var unit = header.querySelector(".anim-unit select");
+var formulas = header.querySelector(".anim-formulas");
+var readout = header.querySelector(".anim-readout");
+var footer = document.createElement("div");
+footer.className = "anim-footer";
+footer.innerHTML = "<div class=\"anim-mode\"><span>Show</span><div class=\"anim-toggle\" role=\"group\" aria-label=\"Expected values or random counts\"><button type=\"button\" value=\"0\">Expected values</button><button type=\"button\" value=\"1\">Random counts</button></div></div><button type=\"button\" class=\"anim-new\">New draw</button><button type=\"button\" class=\"anim-retest\">Retest the positives</button><div class=\"anim-view\"><span>View</span><div class=\"anim-toggle\" role=\"group\" aria-label=\"View of the right panel\"><button type=\"button\" value=\"0\">Matrix</button><button type=\"button\" value=\"1\">Curve</button></div></div><span class=\"anim-hint\">Make the disease rarer: what happens to <i>P</i>(<i>D</i> | <i>T</i>)?</span>";
+gd.appendChild(footer);
+
+// Parameters: one group of sliders per law (the others hidden), the values
+// shown in the unit of x (or its inverse, an inverse power, or none); a law
+// may keep two of them in order (LAWS[d].order: low, high, gap). The reset
+// button restores the defaults of the law. Both call the page's redraw().
+var DEFAULTS = JSON.parse(JSON.stringify(state.params));
+function showParams() {
+  header.querySelectorAll(".anim-param").forEach(function (p) {
+    var input = p.querySelector("input"), d = input.closest(".anim-group").dataset.dist;
+    var k = input.dataset.unit, u = " " + unit.value;
+    if (k === "inv") { u += "<sup>−1</sup>"; }
+    else if (k.indexOf("inv^") === 0) { u += "<sup>−" + k.slice(4) + "</sup>"; }
+    else if (k !== "x") { u = ""; }
+    p.querySelector("output").innerHTML = fmt(state.params[d][input.dataset.key], 1) + u;
+  });
+}
+header.querySelectorAll(".anim-param input").forEach(function (input) {
+  var d = input.closest(".anim-group").dataset.dist, key = input.dataset.key;
+  input.value = state.params[d][key];
+  input.addEventListener("input", function () {
+    var v = Number(input.value), p = state.params[d], o = LAWS[d].order;
+    if (o && key === o[0]) { v = Math.min(v, p[o[1]] - o[2]); }
+    if (o && key === o[1]) { v = Math.max(v, p[o[0]] + o[2]); }
+    v = Number(v.toFixed(1));
+    p[key] = v;
+    input.value = v;
+    showParams();
+    redraw();
+  });
+});
+header.querySelector(".anim-reset").addEventListener("click", function () {
+  var d = state.dist;
+  state.params[d] = Object.assign({}, DEFAULTS[d]);
+  header.querySelectorAll(".anim-param input").forEach(function (input) {
+    if (input.closest(".anim-group").dataset.dist === d) {
+      input.value = state.params[d][input.dataset.key];
+    }
+  });
+  showParams();
+  redraw();
+});
+unit.addEventListener("change", function () {
+  var layout = {};
+  Object.keys(UNIT_TITLES).forEach(function (k) {
+    layout[k] = UNIT_TITLES[k].split("__UNIT__").join(unit.value);
+  });
+  Plotly.relayout(gd, layout);
+  showParams();
+});
+// Law: its sliders, formulas and x axes (the page's selectLaw does the rest)
+function showLaw(d) {
+  state.dist = d;
+  distList.value = d;
+  header.querySelectorAll(".anim-group").forEach(function (g) {
+    g.hidden = g.dataset.dist !== d;
+  });
+  formulas.innerHTML = LAWS[d].formulas;
+  Plotly.relayout(gd, LAWS[d].axes[state.zoom]);
+}
+distList.addEventListener("change", function () {
+  selectLaw(distList.value);
+  if (history.replaceState) { history.replaceState(null, "", "#" + distList.value); }
+});
+// Zoom on x (state.zoom: 0, the full range; 1, zoomed): the x axes of the
+// law (and, through the ranges of the tracks, the dots)
+toggle(footer.querySelectorAll(".anim-zoom button"), state.zoom, function (z) {
+  state.zoom = z;
+  Plotly.relayout(gd, LAWS[state.dist].axes[z]);
+  redraw();
+});
+
+// Draggable dots on an axis (a track): spec {name, label, n (dots), vertical,
+// step (snap and arrow keys; Shift: ten), digits, tags (labels shown, or
+// none)}; hooks {range(): the axis range, values(): the values of the dots,
+// set(i, v): dot i moved to v, pick(v, values): the dot a press at v grabs
+// (null: the nearer)}
+function makeTrack(spec, hooks) {
+  var el = document.createElement("div"), bar = document.createElement("div");
+  var tr = {name: spec.name, el: el, bar: bar, dots: [], hooks: hooks, digits: spec.digits};
+  el.className = "anim-track" + (spec.vertical ? " anim-vertical" : "");
+  bar.className = "anim-bar";
+  el.appendChild(bar);
+  for (var j = 0; j < spec.n; j++) {
+    (function (i) {
+      var dot = document.createElement("div");
+      dot.className = "anim-dot";
+      dot.tabIndex = 0;
+      dot.setAttribute("role", "slider");
+      dot.setAttribute("aria-label", spec.label);
+      dot.setAttribute("aria-orientation", spec.vertical ? "vertical" : "horizontal");
+      if (spec.tags) { dot.setAttribute("data-tag", spec.tags[i]); }
+      dot.addEventListener("keydown", function (e) {
+        var d = {ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1}[e.key];
+        if (!d) { return; }
+        e.preventDefault();
+        hooks.set(i, hooks.values()[i] + d * spec.step * (e.shiftKey ? 10 : 1));
+      });
+      el.appendChild(dot);
+      tr.dots.push(dot);
+    })(j);
+  }
+  // Value under the pointer (the page may be scaled: measured on screen)
+  var at = function (e) {
+    var g = LAYOUTS[state.layout].tracks[tr.name], r = el.getBoundingClientRect();
+    var range = hooks.range();
+    var s = (g.vertical ? r.height : r.width) / (g.len + 2 * TRACK_PAD);
+    var t = ((g.vertical ? r.bottom - e.clientY : e.clientX - r.left) / s - TRACK_PAD) / g.len;
+    t = clamp(0, 1)(t);
+    return range[0] + t * (range[1] - range[0]);
+  };
+  // A press moves the dot it grabs there, then drags it
+  var drag = null;
+  el.addEventListener("pointerdown", function (e) {
+    e.preventDefault();
+    var v = at(e), vals = hooks.values();
+    drag = hooks.pick ? hooks.pick(v, vals) : null;
+    if (drag === null) {
+      drag = 0;
+      vals.forEach(function (w, i) {
+        if (Math.abs(v - w) < Math.abs(v - vals[drag])) { drag = i; }
+      });
+    }
+    el.setPointerCapture(e.pointerId);
+    tr.dots[drag].focus({preventScroll: true});
+    hooks.set(drag, v);
+  });
+  el.addEventListener("pointermove", function (e) {
+    if (drag !== null) { hooks.set(drag, at(e)); }
+  });
+  var end = function () { drag = null; };
+  el.addEventListener("pointerup", end);
+  el.addEventListener("pointercancel", end);
+  gd.appendChild(el);
+  tracks.push(tr);
+  return tr;
+}
+// Place the dots of a track at vals, the bar from bar[0] to bar[1] (null: no
+// bar), the dots not shown hidden (shown: booleans, or all)
+function placeTrack(tr, vals, bar, shown) {
+  var g = LAYOUTS[state.layout].tracks[tr.name], range = tr.hooks.range();
+  var pos = function (v) {
+    var t = (v - range[0]) / (range[1] - range[0]);
+    return TRACK_PAD + (g.vertical ? 1 - t : t) * g.len;
+  };
+  tr.dots.forEach(function (dot, i) {
+    dot.style[g.vertical ? "top" : "left"] = pos(vals[i]) + "px";
+    dot.style.display = shown && !shown[i] ? "none" : "";
+    dot.setAttribute("aria-valuenow", vals[i].toFixed(tr.digits));
+  });
+  var a = bar ? pos(bar[0]) : 0, b = bar ? pos(bar[1]) : 0;
+  tr.bar.style[g.vertical ? "top" : "left"] = Math.min(a, b) + "px";
+  tr.bar.style[g.vertical ? "height" : "width"] = Math.abs(b - a) + "px";
+}
+
+// Layouts: sizes, panels and titles (relayout), the header, footer and tracks
+function applyLayout(name) {
+  var L = LAYOUTS[name];
+  state.layout = name;
+  gd.classList.toggle("tall", name === "tall");
+  gd.style.width = L.width + "px";
+  gd.style.height = L.height + "px";
+  header.style.cssText = L.header;
+  footer.style.cssText = L.footer;
+  tracks.forEach(function (tr) { tr.el.style.cssText = L.tracks[tr.name].box; });
+  placeAll();
+  return Plotly.relayout(gd, L.relayout);
+}
+// Fit to the window: the layout that shows larger (the first if equal), as
+// one box scaled by a CSS transform (the plot is vector, sharp at any scale
+// and pixel density), up to 1.5 times its size, centred, with a
+// small margin
+var PAD = 8, box = gd.parentNode;
+document.body.style.margin = "0";
+box.style.overflow = "hidden";
+box.style.margin = PAD + "px auto";
+gd.style.transformOrigin = "0 0";
+function fit() {
+  var best = null, s = 0;
+  Object.keys(LAYOUTS).forEach(function (name) {
+    var L = LAYOUTS[name];
+    var k = Math.min((window.innerWidth - 2 * PAD) / L.width,
+                     (window.innerHeight - 2 * PAD) / L.height, 1.5);
+    if (best === null || k > s) { best = name; s = k; }
+  });
+  var done = best !== state.layout ? applyLayout(best) : Promise.resolve();
+  gd.style.transform = "scale(" + s + ")";
+  box.style.width = LAYOUTS[best].width * s + "px";
+  box.style.height = LAYOUTS[best].height * s + "px";
+  return done;
+}
+window.addEventListener("resize", function () { fit(); });
+// Start (called at the end of the page script): the law of the URL hash, the
+// layout (the first one replots the figure: draw once it is done)
+function start() {
+  Object.keys(LAWS).forEach(function (d) {
+    if (location.hash === "#" + d) { state.dist = d; }
+  });
+  return fit().then(function () {
+    showParams();
+    selectLaw(state.dist);
+  });
+}
+
+var LAW = "test", TR = {"branches": 0, "matrix": 1, "ppv": 2, "npv": 3, "dots": 4}, META = [null, 0, 1, 1, 1], VIEWS = [{"annotations[1].text":"Confusion matrix","annotations[2].visible":false,"annotations[3].visible":false,"xaxis2.type":"linear","xaxis2.range":[-0.5,2.5],"xaxis2.tickmode":"array","xaxis2.tickvals":[0,1,2],"xaxis2.ticktext":["Positive","Negative","<b>Total</b>"],"xaxis2.showgrid":false,"xaxis2.ticks":"","xaxis2.side":"bottom","xaxis2.title.text":"","yaxis2.range":[-0.5,2.5],"yaxis2.tickmode":"array","yaxis2.tickvals":[0,1,2],"yaxis2.ticktext":["<b>Total</b>","Healthy","Sick"],"yaxis2.showgrid":false,"yaxis2.ticks":"","shapes[0].visible":true,"shapes[1].visible":true},{"annotations[1].text":"<i>P</i>(<i>D</i> | <i>T</i>) against the prior","annotations[2].visible":true,"annotations[3].visible":true,"xaxis2.type":"log","xaxis2.range":[-3.0969100130080562,-0.2218487496163564],"xaxis2.tickmode":"array","xaxis2.tickvals":[0.001,0.01,0.1,0.5],"xaxis2.ticktext":["0.1%","1%","10%","50%"],"xaxis2.showgrid":true,"xaxis2.ticks":"outside","xaxis2.side":"bottom","xaxis2.title.text":"Prior <i>P</i>(<i>D</i>) [–]","yaxis2.range":[-0.1,1.1],"yaxis2.tickmode":"array","yaxis2.tickvals":[0,0.2,0.4,0.6,0.8,1],"yaxis2.ticktext":["0","0.2","0.4","0.6","0.8","1"],"yaxis2.showgrid":true,"yaxis2.ticks":"outside","shapes[0].visible":false,"shapes[1].visible":false}];
+var POPULATIONS = [100, 1000, 10000, 100000], SEED = null, READOUT = "<span>$stage: $pdt = $tp/$pos = <b>$ppv</b>, but <i>P</i>(<i>T</i> | <i>D</i>) = $tp/$sick = $sens: not the same$exactppv</span><span>$neglabel: $pnn = $tn/$neg = <b class=\"anim-ref\">$npv</b>$exactnpv</span>";
+var LEFT_TITLES = ["Test 1: $n people", "Test 2: the $n positives, retested"], ANN = {"nodes": 4, "branches": 11}, NODES = [[0.08, 0.5], [0.46, 0.76], [0.46, 0.24], [0.88, 0.92], [0.88, 0.62], [0.88, 0.38], [0.88, 0.08]];
+var BRANCHES = [[0, 1], [0, 2], [1, 3], [1, 4], [2, 5], [2, 6]], PRIOR_RANGE = [-3.0969100130080562, -0.2218487496163564], NOTATION = {"pdt": ["<i>P</i>(<i>D</i> | <i>T</i>)", "<i>P</i>(<i>D</i> | <i>T</i><sub>1</sub>, <i>T</i><sub>2</sub>)"], "pnn": ["<i>P</i>(¬<i>D</i> | ¬<i>T</i>)", "<i>P</i>(¬<i>D</i> | <i>T</i><sub>1</sub>, ¬<i>T</i><sub>2</sub>)"], "neglabel": ["Negative test", "Positive, then negative"]};
+var random = null, sample = null, stage = 1;
+state.mode = state.mode || 0;
+
+// Random numbers: Math.random, or a generator seeded with SEED (mulberry32),
+// started once per load
+function generator() {
+  if (SEED === null) { return Math.random; }
+  var a = SEED >>> 0;
+  return function () {
+    a = (a + 0x6D2B79F5) >>> 0;
+    var t = Math.imul(a ^ (a >>> 15), a | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function binomial(n, p) {
+  var k = 0;
+  for (var i = 0; i < n; i++) { if (random() < p) { k++; } }
+  return k;
+}
+function values() {
+  var v = state.params[LAW];
+  return {p: v.prior / 100, sens: v.sens / 100, spec: v.spec / 100};
+}
+// The counts of a test of `sick` and `healthy` people: expected, or drawn
+// (state.mode: 0, expected; 1, sample)
+function test(sick, healthy, v) {
+  var tp = state.mode ? binomial(sick, v.sens) : sick * v.sens;
+  var fp = state.mode ? binomial(healthy, 1 - v.spec) : healthy * (1 - v.spec);
+  return {sick: sick, healthy: healthy, tp: tp, fn: sick - tp, fp: fp, tn: healthy - fp};
+}
+// Test 1 of the population (sick drawn with random counts), and test 2 of its
+// positives; kept until a change (sample: the same draws while shown)
+function tests() {
+  var v = values(), N = state.pop;
+  var sick = state.mode ? binomial(N, v.p) : N * v.p;
+  var t1 = test(sick, N - sick, v);
+  return [t1, test(t1.tp, t1.fp, v)];
+}
+// Exact values: P(D | T) and P(not D | not T) for a prior p
+function ppv(p, v) { return v.sens * p / (v.sens * p + (1 - v.spec) * (1 - p)); }
+function npv(p, v) { return v.spec * (1 - p) / (v.spec * (1 - p) + (1 - v.sens) * p); }
+// A count: an integer with commas, or 2 decimals
+function count(x) {
+  var r = Math.round(x);
+  var s = Math.abs(x - r) < 1e-6 ? String(r) : x.toFixed(2);
+  var parts = s.split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+}
+function pct(x, d) { return fmt(100 * x, d) + "%"; }
+// A share of the population, in % with 2 decimals (100% as such)
+function share(x) {
+  var v = 100 * x;
+  return (Math.abs(v - 100) < 1e-9 ? "100" : fmt(v, 2)) + "%";
+}
+
+// Draw the test shown (stage 1 or 2): the tree, the matrix, the curve, the
+// lines
+function draw() {
+  var v = values(), t = sample[stage - 1], pos = t.tp + t.fp, neg = t.fn + t.tn;
+  var n = t.sick + t.healthy, prior = stage === 1 ? v.p : ppv(v.p, v);
+  // Tree: the counts at the nodes, the probabilities on the branches
+  var nodeText = [
+    "<b>" + count(n) + "</b><br>" + (stage === 1 ? "people" : "positives"),
+    "<b>" + count(t.sick) + "</b><br>sick", "<b>" + count(t.healthy) + "</b><br>healthy",
+    "<b>" + count(t.tp) + "</b> positive", "<b>" + count(t.fn) + "</b> negative",
+    "<b>" + count(t.fp) + "</b> positive", "<b>" + count(t.tn) + "</b> negative"
+  ];
+  var branchText = [pct(prior, 1), pct(1 - prior, 1), pct(v.sens, 1), pct(1 - v.sens, 1),
+                    pct(1 - v.spec, 1), pct(v.spec, 1)];
+  var layout = {"annotations[0].text": LEFT_TITLES[stage - 1].replace("$n", count(n))};
+  nodeText.forEach(function (s, i) { layout["annotations[" + (ANN.nodes + i) + "].text"] = s; });
+  branchText.forEach(function (s, i) { layout["annotations[" + (ANN.branches + i) + "].text"] = s; });
+  // Matrix: rows Total, Healthy, Sick (bottom up), columns Positive,
+  // Negative, Total; each count with its share of the population, in
+  // brackets (totals in bold)
+  var cell = function (x, bold) {
+    var c = bold ? "<b>" + count(x) + "</b>" : count(x);
+    return c + '<br><span style="font-size:0.8em">(' + share(x / n) + ")</span>";
+  };
+  var text = [
+    [cell(pos, true), cell(neg, true), cell(n, true)],
+    [cell(t.fp), cell(t.tn), cell(t.healthy, true)],
+    [cell(t.tp), cell(t.fn), cell(t.sick, true)]
+  ];
+  // Curve: P(D | T) and P(not D | not T) against the prior, the tests' dots
+  var cx = [], cp = [], cn = [];
+  for (var k = 0; k <= 200; k++) {
+    var q = Math.pow(10, PRIOR_RANGE[0] + (PRIOR_RANGE[1] - PRIOR_RANGE[0]) * k / 200);
+    cx.push(q); cp.push(ppv(q, v)); cn.push(npv(q, v));
+  }
+  var dots = {x: [v.p], y: [ppv(v.p, v)]};
+  if (stage === 2) { dots.x.push(prior); dots.y.push(ppv(prior, v)); }
+  Plotly.update(gd, {
+    text: [text, undefined, undefined, undefined],
+    x: [undefined, cx, cx, dots.x],
+    y: [undefined, cp, cn, dots.y]
+  }, layout, [TR.matrix, TR.ppv, TR.npv, TR.dots]);
+  // Lines
+  var exactP = ppv(prior, v), exactN = npv(prior, v);
+  var parts = {
+    "$stage": stage === 1 ? "Positive test" : "Two positive tests",
+    "$pdt": NOTATION.pdt[stage - 1], "$pnn": NOTATION.pnn[stage - 1],
+    "$neglabel": NOTATION.neglabel[stage - 1],
+    "$tp": count(t.tp), "$pos": count(pos), "$sick": count(t.sick),
+    "$tn": count(t.tn), "$neg": count(neg),
+    "$ppv": pos ? pct(t.tp / pos, 1) : "–", "$sens": t.sick ? pct(t.tp / t.sick, 1) : "–",
+    "$npv": neg ? pct(t.tn / neg, 2) : "–",
+    "$exactppv": state.mode ? " (exact: " + pct(exactP, 1) + ")" : "",
+    "$exactnpv": state.mode ? " (exact: " + pct(exactN, 2) + ")" : ""
+  };
+  var s = READOUT;
+  Object.keys(parts).forEach(function (k) { s = s.split(k).join(parts[k]); });
+  readout.innerHTML = s;
+  retest.textContent = stage === 1 ? "Retest the positives" : "Back to test 1";
+}
+// After a change of parameter, population or mode: test 1, new counts
+function redraw() {
+  stage = 1;
+  sample = tests();
+  draw();
+}
+function placeAll() {}
+function selectLaw(d) { showLaw(d); show(); redraw(); }
+
+// Population size: a list in the header row
+var popLabel = document.createElement("label"), popList = document.createElement("select");
+popLabel.className = "anim-pop";
+popLabel.innerHTML = "Population";
+popList.className = "anim-select";
+popList.innerHTML = POPULATIONS.map(function (n) {
+  return '<option value="' + n + '">' + count(n) + "</option>";
+}).join("");
+popList.value = String(state.pop);
+popLabel.appendChild(popList);
+header.querySelector(".anim-row").appendChild(popLabel);
+popList.addEventListener("change", function () { state.pop = Number(popList.value); redraw(); });
+
+// Footer: counts (expected or sample), a new sample, the retest, the view
+var newSample = footer.querySelector(".anim-new"), retest = footer.querySelector(".anim-retest");
+function modeButtons() { newSample.disabled = !state.mode; }
+toggle(footer.querySelectorAll(".anim-mode button"), state.mode, function (m) {
+  state.mode = m;
+  modeButtons();
+  redraw();
+});
+newSample.addEventListener("click", function () { if (state.mode) { redraw(); } });
+retest.addEventListener("click", function () { stage = 3 - stage; draw(); });
+// View of the right panel (state.view: 0, matrix; 1, curve): its traces
+// (META: the view of each, null for both panels), titles and axes
+function show() {
+  var vis = META.map(function (v) { return v === null || v === state.view; });
+  Plotly.restyle(gd, {visible: vis}, META.map(function (v, i) { return i; }));
+  Plotly.relayout(gd, VIEWS[state.view]);
+}
+toggle(footer.querySelectorAll(".anim-view button"), state.view, function (v) {
+  state.view = v;
+  show();
+  draw();
+});
+
+// Start: the generator, the layout
+random = generator();
+modeButtons();
+start();
+
+                        })                };            </script>        </div>
+</body>
+</html>
