@@ -18,6 +18,14 @@ The site follows the course, Modules 1 to 5.
   Beside it, $P(A)$ is plotted against $n$, with the share of 10,000 simulated classes: an even chance from 23 people.
   The $\binom{n}{2}$ pairs explain why it grows so fast, unlike the chance that someone shares *my* birthday, $1 - (364/365)^{n-1}$.
 
+- **[Secret Santa: the matching problem](https://marcevrard.github.io/proba-animations/module1/secret-santa/secret-santa.html)**
+
+  This page shows how likely it is that nobody in a Secret Santa draws their own name: a derangement.
+  Friends draw names from a hat, arrows show who gives to whom, and someone who draws their own name means a new draw.
+  By inclusion–exclusion, a draw is valid with probability $1 - 1 + \frac{1}{2!} - \cdots \pm \frac{1}{n!}$, close to $e^{-1} \approx 36.8\%$ from 6 friends on, whatever the size of the group.
+  One view plots the probabilities against $n$ with simulated draws, the other shows the formula converge term by term.
+  Montmort's card game (1708) is the same problem.
+
 ### Module 4: Continuous random variables
 
 - **[PDF and CDF](https://marcevrard.github.io/proba-animations/module4/pdf-cdf/pdf-cdf.html)**
@@ -70,6 +78,8 @@ The site follows the course, Modules 1 to 5.
 ## Using the pages
 
 - In the birthday page, drag $n$ along the axis or press play, and draw a new class.
+
+- In the Secret Santa page, drag $n$ along the axis, press play to watch the draws, or add 1,000 draws at once.
 
 - In the PDF and CDF page, drag the dots on the axes.
 
