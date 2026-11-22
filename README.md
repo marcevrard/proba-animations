@@ -36,6 +36,16 @@ The site follows the course, Modules 1 to 5.
   A curve shows how $P(D \mid T)$ falls as the disease gets rarer.
   The counts can be expected values or random counts, and retesting the positives updates the prior with Bayes' theorem.
 
+### Module 3: Discrete random variables
+
+- **[Capture–recapture: how many bugs are left?](https://marcevrard.github.io/proba-animations/module3/bugs/bugs.html)**
+
+  This page estimates the number of bugs in a program from two testers' finds.
+  Alice finds $m$ bugs, Bob finds $n$, and $K$ of them are in common: $\hat N = mn/K$ estimates the total, and the bugs still hidden.
+  Since Bob cannot find the same bug twice, $K$ follows a hypergeometric law, $\mathrm{HGeom}(N, m, n)$; the binomial $\mathrm{Bin}(n, m/N)$ would let him.
+  Sliders set $N$ (from 20 to 10,000), Alice's share and Bob's finds: as $N$ grows, the hypergeometric merges into the binomial.
+  With easy and hard bugs, both testers find the easy ones, and the estimate falls short.
+
 ### Module 4: Continuous random variables
 
 - **[PDF and CDF](https://marcevrard.github.io/proba-animations/module4/pdf-cdf/pdf-cdf.html)**
@@ -92,6 +102,8 @@ The site follows the course, Modules 1 to 5.
 - In the Secret Santa page, drag $n$ along the axis, press play to watch the draws, or add 1,000 draws at once.
 
 - In the screening page, move the sliders, choose the population size, and retest the positives.
+
+- In the bugs page, move the sliders, press play to watch a test campaign, or draw a new one.
 
 - In the PDF and CDF page, drag the dots on the axes.
 

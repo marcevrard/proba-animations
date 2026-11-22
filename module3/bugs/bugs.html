@@ -1,0 +1,584 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capture–recapture: how many bugs are left?</title>
+    <style>html, body {height: 100%;}</style>
+</head>
+<body>
+    <div style="height:652px; width:720px;">                        <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="../../plotly.min.js"></script>                <div id="bugs" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("bugs")) {                    Plotly.newPlot(                        "bugs",                        [{"colorscale":[[0.0,"#efefef"],[0.2,"#efefef"],[0.2,"#8c8c8c"],[0.4,"#8c8c8c"],[0.4,"#7fb2dd"],[0.6,"#7fb2dd"],[0.6,"#ffb36b"],[0.8,"#ffb36b"],[0.8,"#2ca02c"],[1.0,"#2ca02c"]],"hoverinfo":"skip","showscale":false,"xgap":1,"ygap":1,"z":[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],"zmax":4.5,"zmin":-0.5,"type":"heatmap","xaxis":"x","yaxis":"y"},{"hoverinfo":"skip","marker":{"color":"#1f77b4","opacity":0.55},"name":"HGeom: without replacement","visible":true,"width":0.7,"x":[],"y":[],"type":"bar","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","marker":{"color":"#ff7f0e","size":7},"mode":"markers","name":"Bin: with replacement","visible":true,"x":[],"y":[],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","line":{"color":"#2ca02c","width":1.8},"marker":{"color":"#2ca02c","size":5},"mode":"lines+markers","name":"Simulated, easy and hard bugs","visible":true,"x":[],"y":[],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","line":{"color":"#242424","dash":"dash","width":1.5},"mode":"lines","showlegend":false,"visible":true,"x":[],"y":[],"type":"scatter","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","marker":{"color":"#1f77b4"},"name":"Values of \u003ci\u003eN\u003c\u002fi\u003e\u0302, with their probability","visible":false,"x":[],"y":[],"type":"bar","xaxis":"x2","yaxis":"y2"},{"hoverinfo":"skip","line":{"color":"#ff7f0e","dash":"dash","width":2},"mode":"lines","name":"True \u003ci\u003eN\u003c\u002fi\u003e","visible":false,"x":[],"y":[],"type":"scatter","xaxis":"x2","yaxis":"y2"}],                        {"template":{"data":{"barpolar":[{"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"white","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"contour"}],"heatmap":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"histogram2d"}],"histogram":[{"marker":{"line":{"color":"white","width":0.6}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattergl"}],"scattermap":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scattermap"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"},"colorscale":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"rgb(237,237,237)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(217,217,217)"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":1,"tickcolor":"rgb(36,36,36)","ticks":"outside"}},"colorscale":{"diverging":[[0.0,"rgb(103,0,31)"],[0.1,"rgb(178,24,43)"],[0.2,"rgb(214,96,77)"],[0.3,"rgb(244,165,130)"],[0.4,"rgb(253,219,199)"],[0.5,"rgb(247,247,247)"],[0.6,"rgb(209,229,240)"],[0.7,"rgb(146,197,222)"],[0.8,"rgb(67,147,195)"],[0.9,"rgb(33,102,172)"],[1.0,"rgb(5,48,97)"]],"sequential":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]],"sequentialminus":[[0.0,"#440154"],[0.1111111111111111,"#482878"],[0.2222222222222222,"#3e4989"],[0.3333333333333333,"#31688e"],[0.4444444444444444,"#26828e"],[0.5555555555555556,"#1f9e89"],[0.6666666666666666,"#35b779"],[0.7777777777777778,"#6ece58"],[0.8888888888888888,"#b5de2b"],[1.0,"#fde725"]]},"colorway":["#1F77B4","#FF7F0E","#2CA02C","#D62728","#9467BD","#8C564B","#E377C2","#7F7F7F","#BCBD22","#17BECF"],"font":{"color":"rgb(36,36,36)"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"white","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","paper_bgcolor":"white","plot_bgcolor":"white","polar":{"angularaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","radialaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"scene":{"xaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"zaxis":{"backgroundcolor":"white","gridcolor":"rgb(232,232,232)","gridwidth":2,"linecolor":"rgb(36,36,36)","showbackground":true,"showgrid":false,"showline":true,"ticks":"outside","zeroline":false,"zerolinecolor":"rgb(36,36,36)"}},"shapedefaults":{"fillcolor":"black","line":{"width":0},"opacity":0.3},"ternary":{"aaxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"baxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"},"bgcolor":"white","caxis":{"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside"}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"},"yaxis":{"automargin":true,"gridcolor":"rgb(232,232,232)","linecolor":"rgb(36,36,36)","showgrid":false,"showline":true,"ticks":"outside","title":{"standoff":15},"zeroline":false,"zerolinecolor":"rgb(36,36,36)"}}},"xaxis":{"anchor":"y","domain":[0.0,0.432258064516129],"fixedrange":true,"mirror":true,"showline":true,"ticks":"outside","showgrid":true,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"linear","tick0":0,"range":[-0.5,19.5],"visible":false,"constrain":"domain"},"yaxis":{"anchor":"x","domain":[0.0,1.0],"fixedrange":true,"mirror":true,"showline":true,"ticks":"outside","showgrid":true,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"linear","tick0":0,"range":[-0.5,19.5],"visible":false,"constrain":"domain","scaleanchor":"x"},"xaxis2":{"anchor":"y2","domain":[0.567741935483871,1.0],"fixedrange":true,"mirror":true,"showline":true,"ticks":"outside","showgrid":true,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"linear","tick0":0,"title":{"standoff":6,"text":"\u003ci\u003ek\u003c\u002fi\u003e [bugs found twice]"},"range":[-0.5,25.5],"dtick":5},"yaxis2":{"anchor":"x2","domain":[0.0,1.0],"fixedrange":true,"mirror":true,"showline":true,"ticks":"outside","showgrid":true,"gridcolor":"#ececec","gridwidth":1,"zeroline":false,"tickmode":"linear","tick0":0,"range":[0,0.3],"dtick":0.1},"annotations":[{"font":{"size":16},"showarrow":false,"text":"Code base","x":0.2161290322580645,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"Overlap \u003ci\u003eK\u003c\u002fi\u003e: two models","x":0.7838709677419355,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"align":"center","font":{"size":12},"showarrow":false,"text":"\u003ci\u003eP\u003c\u002fi\u003e","width":42,"x":0.567741935483871,"xanchor":"right","xref":"paper","xshift":-29,"y":0.5,"yanchor":"bottom","yref":"paper","yshift":3.0},{"align":"center","font":{"size":12},"showarrow":false,"text":"[\u2013]","width":42,"x":0.567741935483871,"xanchor":"right","xref":"paper","xshift":-29,"y":0.5,"yanchor":"top","yref":"paper","yshift":-3.0}],"bargap":0.3,"margin":{"l":76,"r":24,"b":148,"t":264},"font":{"family":"Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif","size":12},"title":{"subtitle":{"text":"Alice finds \u003ci\u003em\u003c\u002fi\u003e bugs, Bob \u003ci\u003en\u003c\u002fi\u003e, \u003ci\u003eK\u003c\u002fi\u003e of them in common: \u003ci\u003eN\u003c\u002fi\u003e\u0302 = \u003ci\u003em\u003c\u002fi\u003e\u003ci\u003en\u003c\u002fi\u003e\u002f\u003ci\u003eK\u003c\u002fi\u003e estimates the number of bugs \u003ci\u003eN\u003c\u002fi\u003e"},"text":"Capture\u2013recapture: how many bugs are left?","x":0.02,"yref":"container","y":0.9754601226993865,"yanchor":"top"},"width":720,"height":652,"showlegend":true,"hovermode":false,"legend":{"font":{"size":12},"x":1.0,"y":1.0,"xanchor":"right","yanchor":"top","bgcolor":"rgba(255, 255, 255, 0.85)","itemclick":false,"itemdoubleclick":false}},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById("bugs");
+var LAWS = {"bugs":{"order":null,"axes":[{}],"formulas":"<span>HGeom: <i>P</i>(<i>K</i> = <i>k</i>) = C(<i>m</i>, <i>k</i>) C(<i>N</i> − <i>m</i>, <i>n</i> − <i>k</i>) / C(<i>N</i>, <i>n</i>)</span><span>Bin: <i>P</i>(<i>K</i> = <i>k</i>) = C(<i>n</i>, <i>k</i>) (<i>m</i>/<i>N</i>)<sup><i>k</i></sup> (1 − <i>m</i>/<i>N</i>)<sup><i>n</i> − <i>k</i></sup></span><span><i>N</i>̂ = <i>m</i><i>n</i>/<i>K</i></span>"}}, LAYOUTS = {"wide":{"width":720,"height":652,"relayout":{"annotations[0].x":0.2161290322580645,"annotations[1].x":0.7838709677419355,"annotations[1].y":1.0,"annotations[2].x":0.567741935483871,"annotations[2].y":0.5,"annotations[3].x":0.567741935483871,"annotations[3].y":0.5,"height":652,"legend.y":1.0,"margin.b":148,"margin.t":264,"title.subtitle.text":"Alice finds <i>m</i> bugs, Bob <i>n</i>, <i>K</i> of them in common: <i>N</i>̂ = <i>m</i><i>n</i>/<i>K</i> estimates the number of bugs <i>N</i>","title.y":0.9754601226993865,"width":720,"xaxis.domain":[0.0,0.432258064516129],"xaxis2.domain":[0.567741935483871,1.0],"yaxis.domain":[0.0,1.0],"yaxis2.domain":[0.0,1.0]},"header":"left:76px;top:80px;width:628px","footer":"left:0px;top:552px;width:720px","tracks":{}},"tall":{"width":432,"height":1094,"relayout":{"annotations[0].x":0.5,"annotations[1].x":0.5,"annotations[1].y":0.4230769230769231,"annotations[2].x":0.0,"annotations[2].y":0.21153846153846154,"annotations[3].x":0.0,"annotations[3].y":0.21153846153846154,"height":1094,"legend.y":0.4230769230769231,"margin.b":212,"margin.t":362,"title.subtitle.text":"Alice finds <i>m</i> bugs, Bob <i>n</i>, <i>K</i> of them in common:<br><i>N</i>̂ = <i>m</i><i>n</i>/<i>K</i> estimates the number of bugs <i>N</i>","title.y":0.9853747714808044,"width":432,"xaxis.domain":[0.0,1.0],"xaxis2.domain":[0.0,1.0],"yaxis.domain":[0.5769230769230769,1.0],"yaxis2.domain":[0.0,0.4230769230769231]},"header":"left:16px;top:96px;width:400px","footer":"left:0px;top:930px;width:432px","tracks":{}}}, UNIT_TITLES = {};
+var TRACK_PAD = 10;
+var state = {"dist": "bugs", "layout": null, "zoom": 0, "ni": 2, "n": 25, "easy": 0, "reveal": 0, "view": 0, "params": {"bugs": {"share": 60}}}, tracks = [];
+
+function clamp(lo, hi) {
+  return function (v) { return Math.min(Math.max(v, lo), hi); };
+}
+// A number with d decimals, with a minus sign (and no "-0")
+function fmt(v, d) {
+  var s = v.toFixed(d);
+  if (Number(s) === 0) { s = (0).toFixed(d); }
+  return s.replace("-", "−");
+}
+// Buttons of a toggle (one pressed, by value), calling onchange(value)
+function toggle(buttons, value, onchange) {
+  buttons.forEach(function (btn) {
+    btn.setAttribute("aria-pressed", Number(btn.value) === value);
+    btn.addEventListener("click", function () {
+      if (btn.getAttribute("aria-pressed") === "true") { return; }
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn); });
+      onchange(Number(btn.value));
+    });
+  });
+}
+
+var style = document.createElement("style");
+style.textContent = "\n.anim-header, .anim-track, .anim-footer {position: absolute; z-index: 10;\n  box-sizing: border-box; font-family: Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif; color: #242424;}\n.anim-header {display: flex; flex-direction: column; gap: 8px; font-size: 12px;\n  line-height: 1.35;}\n.anim-header sub, .anim-header sup {line-height: 0;}\n.anim-row {display: flex; align-items: center; gap: 18px; white-space: nowrap;}\n.anim-select {height: 26px; padding: 0 8px; font: inherit;\n  border: 1px solid #b8b8b8; border-radius: 6px; background: white;\n  color: inherit; cursor: pointer;}\n.anim-dist, .anim-unit, .anim-param {display: flex; align-items: center; gap: 8px;}\n.anim-dist select {width: 108px;}\n.anim-unit select {width: 60px;}\n.anim-group {display: flex; gap: 18px;}\n.anim-group[hidden] {display: none;}\n.anim-params {display: flex; align-items: center; gap: 10px;}\n.anim-param input {width: 68px; margin: 0; accent-color: #1f77b4; cursor: pointer;}\n.anim-param output {min-width: 46px;}\n.anim-reset, .anim-btn {flex: none; width: 24px; height: 24px; border: none;\n  border-radius: 50%; padding: 0; display: flex; align-items: center;\n  justify-content: center; background: #1f77b4; color: white;\n  font-family: sans-serif; font-size: 15px; cursor: pointer;\n  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);}\n.anim-reset:hover, .anim-btn:hover {filter: brightness(0.88);}\n.anim-reset:active, .anim-btn:active {filter: brightness(0.75);}\n.anim-formulas, .anim-readout {display: flex; flex-wrap: wrap; column-gap: 18px;\n  row-gap: 2px; white-space: nowrap;}\n.anim-readout {column-gap: 5px;}\n.anim-readout b {color: #ff7f0e;}\n.tall .anim-row {flex-wrap: wrap; row-gap: 8px;}\n.tall .anim-params {order: 1; flex-basis: 100%;}\n.anim-track {touch-action: none; cursor: pointer;}\n.anim-bar {position: absolute; background: #ff7f0e; border-radius: 2px;\n  pointer-events: none;}\n.anim-track:not(.anim-vertical) .anim-bar {top: calc(50% - 2px); height: 4px;}\n.anim-vertical .anim-bar {left: calc(50% - 2px); width: 4px;}\n.anim-dot {position: absolute; width: 14px; height: 14px; margin: -7px 0 0 -7px;\n  box-sizing: border-box; border-radius: 50%; background: #ff7f0e;\n  border: 2px solid white; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); cursor: grab;}\n.anim-track:not(.anim-vertical) .anim-dot {top: 50%;}\n.anim-vertical .anim-dot {left: 50%;}\n.anim-dot[data-tag]::after {content: attr(data-tag); position: absolute;\n  bottom: 15px; left: 50%; transform: translateX(-50%); font-size: 12px;\n  font-style: italic; color: #b35a00; white-space: nowrap; pointer-events: none;}\n.anim-footer {display: flex; flex-wrap: wrap; justify-content: center;\n  align-items: center; column-gap: 22px; row-gap: 6px; font-size: 12px;\n  white-space: nowrap;}\n.anim-footer > * {min-height: 26px; display: flex; align-items: center; gap: 8px;}\n.anim-toggle {display: flex; border: 1px solid #b8b8b8; border-radius: 6px;\n  overflow: hidden;}\n.anim-toggle button {min-width: 40px; height: 24px; border: none; padding: 0 10px;\n  font: inherit; color: inherit; background: white; cursor: pointer;}\n.anim-toggle button + button {border-left: 1px solid #b8b8b8;}\n.anim-toggle button:hover {background: #f0f0f0;}\n.anim-toggle button[aria-pressed=\"true\"] {background: #1f77b4; color: white;}\n.anim-hint {color: #6b6b6b;}\n.anim-footer > .anim-hint {display: block; min-height: 0;}\n.anim-footer > .anim-note {display: block; flex-basis: 100%; min-height: 0;\n  font-size: 11px; line-height: 1.2; color: #6b6b6b; white-space: normal;\n  text-align: center;}\n.anim-footer > .anim-note[hidden] {display: none;}\n.anim-note sub, .anim-note sup {line-height: 0;}\n.anim-math {white-space: nowrap;}\n.anim-header :focus-visible, .anim-footer :focus-visible,\n.anim-dot:focus-visible {outline: 2px solid #1f77b4;\n  outline-offset: 2px;}\n\n.anim-play {background: #2ca02c; font-size: 11px;}\n.anim-pause {background: #ff7f0e; font-size: 9px;}\n.anim-new {height: 26px; padding: 0 10px; font: inherit; color: inherit;\n  background: white; border: 1px solid #b8b8b8; border-radius: 6px;\n  cursor: pointer;}\n.anim-new:hover {background: #f0f0f0;}\n.anim-row {flex-wrap: wrap; row-gap: 8px;}\n.anim-params {order: 1; flex-basis: 100%;}\n.anim-own {display: flex; align-items: center; gap: 8px;}\n.anim-own input {width: 80px; margin: 0; accent-color: #1f77b4; cursor: pointer;}\n.anim-own output {min-width: 46px;}\n.anim-readout > * {flex-basis: 100%; white-space: normal;}\n.anim-readout b.anim-ref {color: #1f77b4;}\n.anim-formulas > * {white-space: normal;}\n";
+document.head.appendChild(style);
+gd.style.position = "relative";
+
+// Header: law, parameters, unit of x; formulas; readout. Footer: toggles and
+// hint.
+var header = document.createElement("div");
+header.className = "anim-header";
+header.innerHTML = "<div class=\"anim-row\"><label class=\"anim-dist\"><select class=\"anim-select\" style=\"display:none\"><option value=\"bugs\">Two testers</option></select><span>Two testers</span></label><div class=\"anim-params\"><div class=\"anim-group\" data-dist=\"bugs\" hidden><label class=\"anim-param\"><span>Alice finds %</span><input type=\"range\" min=\"5\" max=\"60\" step=\"0.1\" value=\"60\" data-key=\"share\" data-unit=\"\"><output></output></label></div><button type=\"button\" class=\"anim-reset\" title=\"Default parameters\" aria-label=\"Default parameters\">↺</button></div><label class=\"anim-unit\" style=\"display:none\">Unit of <i>N</i><select class=\"anim-select\"><option>bugs</option></select></label></div><div class=\"anim-formulas\"></div><div class=\"anim-readout\" aria-live=\"polite\"></div>";
+gd.appendChild(header);
+var distList = header.querySelector(".anim-dist select");
+var unit = header.querySelector(".anim-unit select");
+var formulas = header.querySelector(".anim-formulas");
+var readout = header.querySelector(".anim-readout");
+var footer = document.createElement("div");
+footer.className = "anim-footer";
+footer.innerHTML = "<div><button type=\"button\" class=\"anim-btn anim-play\" title=\"Play (Space)\" aria-label=\"Play\">▶︎</button><button type=\"button\" class=\"anim-btn anim-pause\" title=\"Pause (Space)\" aria-label=\"Pause\">❚❚</button></div><button type=\"button\" class=\"anim-new\">New campaign</button><div class=\"anim-easy\"><span>Bugs</span><div class=\"anim-toggle\" role=\"group\" aria-label=\"Difficulty of the bugs\"><button type=\"button\" value=\"0\">Equally hard</button><button type=\"button\" value=\"1\">Easy and hard</button></div></div><div class=\"anim-reveal\"><span>Hidden bugs</span><div class=\"anim-toggle\" role=\"group\" aria-label=\"Hidden bugs\"><button type=\"button\" value=\"0\">Hide</button><button type=\"button\" value=\"1\">Show</button></div></div><div class=\"anim-view\"><span>View</span><div class=\"anim-toggle\" role=\"group\" aria-label=\"View of the right panel\"><button type=\"button\" value=\"0\">Overlap</button><button type=\"button\" value=\"1\">Estimate</button></div></div><span class=\"anim-hint\">How many bugs are left? And why HGeom rather than Bin?</span><div class=\"anim-note\" hidden>With easy and hard bugs, both testers tend to find the easy ones: their searches depend on each other through a common cause, the bugs' difficulty (see the ch3 note on conditional independence).</div>";
+gd.appendChild(footer);
+
+// Parameters: one group of sliders per law (the others hidden), the values
+// shown in the unit of x (or its inverse, an inverse power, or none); a law
+// may keep two of them in order (LAWS[d].order: low, high, gap). The reset
+// button restores the defaults of the law. Both call the page's redraw().
+var DEFAULTS = JSON.parse(JSON.stringify(state.params));
+function showParams() {
+  header.querySelectorAll(".anim-param").forEach(function (p) {
+    var input = p.querySelector("input"), d = input.closest(".anim-group").dataset.dist;
+    var k = input.dataset.unit, u = " " + unit.value;
+    if (k === "inv") { u += "<sup>−1</sup>"; }
+    else if (k.indexOf("inv^") === 0) { u += "<sup>−" + k.slice(4) + "</sup>"; }
+    else if (k !== "x") { u = ""; }
+    p.querySelector("output").innerHTML = fmt(state.params[d][input.dataset.key], 1) + u;
+  });
+}
+header.querySelectorAll(".anim-param input").forEach(function (input) {
+  var d = input.closest(".anim-group").dataset.dist, key = input.dataset.key;
+  input.value = state.params[d][key];
+  input.addEventListener("input", function () {
+    var v = Number(input.value), p = state.params[d], o = LAWS[d].order;
+    if (o && key === o[0]) { v = Math.min(v, p[o[1]] - o[2]); }
+    if (o && key === o[1]) { v = Math.max(v, p[o[0]] + o[2]); }
+    v = Number(v.toFixed(1));
+    p[key] = v;
+    input.value = v;
+    showParams();
+    redraw();
+  });
+});
+header.querySelector(".anim-reset").addEventListener("click", function () {
+  var d = state.dist;
+  state.params[d] = Object.assign({}, DEFAULTS[d]);
+  header.querySelectorAll(".anim-param input").forEach(function (input) {
+    if (input.closest(".anim-group").dataset.dist === d) {
+      input.value = state.params[d][input.dataset.key];
+    }
+  });
+  showParams();
+  redraw();
+});
+unit.addEventListener("change", function () {
+  var layout = {};
+  Object.keys(UNIT_TITLES).forEach(function (k) {
+    layout[k] = UNIT_TITLES[k].split("__UNIT__").join(unit.value);
+  });
+  Plotly.relayout(gd, layout);
+  showParams();
+});
+// Law: its sliders, formulas and x axes (the page's selectLaw does the rest)
+function showLaw(d) {
+  state.dist = d;
+  distList.value = d;
+  header.querySelectorAll(".anim-group").forEach(function (g) {
+    g.hidden = g.dataset.dist !== d;
+  });
+  formulas.innerHTML = LAWS[d].formulas;
+  Plotly.relayout(gd, LAWS[d].axes[state.zoom]);
+}
+distList.addEventListener("change", function () {
+  selectLaw(distList.value);
+  if (history.replaceState) { history.replaceState(null, "", "#" + distList.value); }
+});
+// Zoom on x (state.zoom: 0, the full range; 1, zoomed): the x axes of the
+// law (and, through the ranges of the tracks, the dots)
+toggle(footer.querySelectorAll(".anim-zoom button"), state.zoom, function (z) {
+  state.zoom = z;
+  Plotly.relayout(gd, LAWS[state.dist].axes[z]);
+  redraw();
+});
+
+// Draggable dots on an axis (a track): spec {name, label, n (dots), vertical,
+// step (snap and arrow keys; Shift: ten), digits, tags (labels shown, or
+// none)}; hooks {range(): the axis range, values(): the values of the dots,
+// set(i, v): dot i moved to v, pick(v, values): the dot a press at v grabs
+// (null: the nearer)}
+function makeTrack(spec, hooks) {
+  var el = document.createElement("div"), bar = document.createElement("div");
+  var tr = {name: spec.name, el: el, bar: bar, dots: [], hooks: hooks, digits: spec.digits};
+  el.className = "anim-track" + (spec.vertical ? " anim-vertical" : "");
+  bar.className = "anim-bar";
+  el.appendChild(bar);
+  for (var j = 0; j < spec.n; j++) {
+    (function (i) {
+      var dot = document.createElement("div");
+      dot.className = "anim-dot";
+      dot.tabIndex = 0;
+      dot.setAttribute("role", "slider");
+      dot.setAttribute("aria-label", spec.label);
+      dot.setAttribute("aria-orientation", spec.vertical ? "vertical" : "horizontal");
+      if (spec.tags) { dot.setAttribute("data-tag", spec.tags[i]); }
+      dot.addEventListener("keydown", function (e) {
+        var d = {ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1}[e.key];
+        if (!d) { return; }
+        e.preventDefault();
+        hooks.set(i, hooks.values()[i] + d * spec.step * (e.shiftKey ? 10 : 1));
+      });
+      el.appendChild(dot);
+      tr.dots.push(dot);
+    })(j);
+  }
+  // Value under the pointer (the page may be scaled: measured on screen)
+  var at = function (e) {
+    var g = LAYOUTS[state.layout].tracks[tr.name], r = el.getBoundingClientRect();
+    var range = hooks.range();
+    var s = (g.vertical ? r.height : r.width) / (g.len + 2 * TRACK_PAD);
+    var t = ((g.vertical ? r.bottom - e.clientY : e.clientX - r.left) / s - TRACK_PAD) / g.len;
+    t = clamp(0, 1)(t);
+    return range[0] + t * (range[1] - range[0]);
+  };
+  // A press moves the dot it grabs there, then drags it
+  var drag = null;
+  el.addEventListener("pointerdown", function (e) {
+    e.preventDefault();
+    var v = at(e), vals = hooks.values();
+    drag = hooks.pick ? hooks.pick(v, vals) : null;
+    if (drag === null) {
+      drag = 0;
+      vals.forEach(function (w, i) {
+        if (Math.abs(v - w) < Math.abs(v - vals[drag])) { drag = i; }
+      });
+    }
+    el.setPointerCapture(e.pointerId);
+    tr.dots[drag].focus({preventScroll: true});
+    hooks.set(drag, v);
+  });
+  el.addEventListener("pointermove", function (e) {
+    if (drag !== null) { hooks.set(drag, at(e)); }
+  });
+  var end = function () { drag = null; };
+  el.addEventListener("pointerup", end);
+  el.addEventListener("pointercancel", end);
+  gd.appendChild(el);
+  tracks.push(tr);
+  return tr;
+}
+// Place the dots of a track at vals, the bar from bar[0] to bar[1] (null: no
+// bar), the dots not shown hidden (shown: booleans, or all)
+function placeTrack(tr, vals, bar, shown) {
+  var g = LAYOUTS[state.layout].tracks[tr.name], range = tr.hooks.range();
+  var pos = function (v) {
+    var t = (v - range[0]) / (range[1] - range[0]);
+    return TRACK_PAD + (g.vertical ? 1 - t : t) * g.len;
+  };
+  tr.dots.forEach(function (dot, i) {
+    dot.style[g.vertical ? "top" : "left"] = pos(vals[i]) + "px";
+    dot.style.display = shown && !shown[i] ? "none" : "";
+    dot.setAttribute("aria-valuenow", vals[i].toFixed(tr.digits));
+  });
+  var a = bar ? pos(bar[0]) : 0, b = bar ? pos(bar[1]) : 0;
+  tr.bar.style[g.vertical ? "top" : "left"] = Math.min(a, b) + "px";
+  tr.bar.style[g.vertical ? "height" : "width"] = Math.abs(b - a) + "px";
+}
+
+// Layouts: sizes, panels and titles (relayout), the header, footer and tracks
+function applyLayout(name) {
+  var L = LAYOUTS[name];
+  state.layout = name;
+  gd.classList.toggle("tall", name === "tall");
+  gd.style.width = L.width + "px";
+  gd.style.height = L.height + "px";
+  header.style.cssText = L.header;
+  footer.style.cssText = L.footer;
+  tracks.forEach(function (tr) { tr.el.style.cssText = L.tracks[tr.name].box; });
+  placeAll();
+  return Plotly.relayout(gd, L.relayout);
+}
+// Fit to the window: the layout that shows larger (the first if equal), as
+// one box scaled by a CSS transform (the plot is vector, sharp at any scale
+// and pixel density), up to 1.5 times its size, centred, with a
+// small margin
+var PAD = 8, box = gd.parentNode;
+document.body.style.margin = "0";
+box.style.overflow = "hidden";
+box.style.margin = PAD + "px auto";
+gd.style.transformOrigin = "0 0";
+function fit() {
+  var best = null, s = 0;
+  Object.keys(LAYOUTS).forEach(function (name) {
+    var L = LAYOUTS[name];
+    var k = Math.min((window.innerWidth - 2 * PAD) / L.width,
+                     (window.innerHeight - 2 * PAD) / L.height, 1.5);
+    if (best === null || k > s) { best = name; s = k; }
+  });
+  var done = best !== state.layout ? applyLayout(best) : Promise.resolve();
+  gd.style.transform = "scale(" + s + ")";
+  box.style.width = LAYOUTS[best].width * s + "px";
+  box.style.height = LAYOUTS[best].height * s + "px";
+  return done;
+}
+window.addEventListener("resize", function () { fit(); });
+// Start (called at the end of the page script): the law of the URL hash, the
+// layout (the first one replots the figure: draw once it is done)
+function start() {
+  Object.keys(LAWS).forEach(function (d) {
+    if (location.hash === "#" + d) { state.dist = d; }
+  });
+  return fit().then(function () {
+    showParams();
+    selectLaw(state.dist);
+  });
+}
+
+var LAW = "bugs", TR = {"cells": 0, "hgeom": 1, "binom": 2, "sim": 3, "observed": 4, "est": 5, "truth": 6}, META = [null, 0, 0, 0, 0, 1, 1], VIEWS = [{"annotations[1].text":"Overlap <i>K</i>: two models","xaxis2.title.text":"<i>k</i> [bugs found twice]"},{"annotations[1].text":"The estimate <i>N</i>̂ = <i>m</i><i>n</i>/<i>K</i>","xaxis2.title.text":"<i>N</i>̂ [bugs]"}];
+var N_VALUES = [20, 30, 50, 100, 200, 500, 1000, 2000, 5000, 10000], N_BOB_MAX = 200, GRID = 20;
+var BUG_DENSITY = 0.5, EASY_SHARE = 0.3;
+var EASY_WEIGHT = 4, M_SIM = 3000, SEARCH_MS = 1800;
+var SEED = null, LEFT_TITLES = ["Code base", "Part of the code base"], DEFAULTS_OWN = {"ni": 2, "n": 25};
+var random = null, camp = null, sim = null, phase = 2, playing = false, last = null, acc = 0;
+var LF = [0];
+for (var i = 1; i <= N_VALUES[N_VALUES.length - 1]; i++) { LF.push(LF[i - 1] + Math.log(i)); }
+
+// Random numbers: Math.random, or a generator seeded with SEED (mulberry32),
+// started once per load
+function generator() {
+  if (SEED === null) { return Math.random; }
+  var a = SEED >>> 0;
+  return function () {
+    a = (a + 0x6D2B79F5) >>> 0;
+    var t = Math.imul(a ^ (a >>> 15), a | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+// The setting: N, m = round(pN), n, the easy bugs E (0 if all are equally
+// hard)
+function setting() {
+  var N = N_VALUES[state.ni], m = Math.min(N, Math.max(1, Math.round(N * state.params[LAW].share / 100)));
+  var n = Math.min(state.n, N);
+  return {N: N, m: m, n: n, E: state.easy ? Math.round(EASY_SHARE * N) : 0};
+}
+// PMFs of K: HGeom(N, m, n) and Bin(n, m/N), from log factorials
+function lchoose(a, b) { return b < 0 || b > a ? -Infinity : LF[a] - LF[b] - LF[a - b]; }
+function hgeom(s) {
+  var out = [];
+  for (var k = 0; k <= s.n; k++) {
+    out.push(Math.exp(lchoose(s.m, k) + lchoose(s.N - s.m, s.n - k) - lchoose(s.N, s.n)));
+  }
+  return out;
+}
+function binom(s) {
+  var p = s.m / s.N, out = [];
+  for (var k = 0; k <= s.n; k++) {
+    var lp = lchoose(s.n, k) + (k ? k * Math.log(p) : 0) +
+      (s.n - k ? (s.n - k) * Math.log(1 - p) : 0);
+    out.push(p === 1 ? (k === s.n ? 1 : 0) : Math.exp(lp));
+  }
+  return out;
+}
+// Draws without replacement of t items from a of type A and b of type B,
+// with weights wa and wb (sequentially): the number of type A
+function drawTypes(a, b, t, wa, wb) {
+  var x = 0;
+  for (var i = 0; i < t; i++) {
+    if (random() * (wa * a + wb * b) < wa * a) { a--; x++; } else { b--; }
+  }
+  return x;
+}
+// One campaign's overlap: each tester's finds (easy ones likelier), then the
+// overlap within each class (uniform there)
+function overlap(s) {
+  var H = s.N - s.E, ae = drawTypes(s.E, H, s.m, EASY_WEIGHT, 1);
+  var be = drawTypes(s.E, H, s.n, EASY_WEIGHT, 1);
+  return drawTypes(ae, s.E - ae, be, 1, 1) + drawTypes(s.m - ae, H - (s.m - ae), s.n - be, 1, 1);
+}
+// The distribution of K over M_SIM simulated campaigns (easy and hard bugs)
+function simulate(s) {
+  var c = [];
+  for (var k = 0; k <= s.n; k++) { c.push(0); }
+  for (var j = 0; j < M_SIM; j++) { c[overlap(s)]++; }
+  return c.map(function (v) { return v / M_SIM; });
+}
+// The campaign shown: the bugs' places in the code base (cells), the easy
+// ones (the first E bugs), Alice's and Bob's finds (weighted sampling
+// without replacement: the m, n largest keys u^(1/w)), their order
+function campaign(s) {
+  var cells = Math.max(GRID * GRID, Math.ceil(s.N / BUG_DENSITY)), place = [];
+  for (var c = 0; c < cells; c++) { place.push(c); }
+  for (c = cells - 1; c > 0; c--) {
+    var j = Math.floor(random() * (c + 1)), t = place[c];
+    place[c] = place[j];
+    place[j] = t;
+  }
+  var pick = function (count) {
+    var keys = [];
+    for (var b = 0; b < s.N; b++) {
+      keys.push([Math.pow(random(), 1 / (b < s.E ? EASY_WEIGHT : 1)), b]);
+    }
+    keys.sort(function (x, y) { return y[0] - x[0]; });
+    return keys.slice(0, count).map(function (x) { return x[1]; });
+  };
+  var alice = pick(s.m), bob = pick(s.n), inA = {};
+  alice.forEach(function (b) { inA[b] = true; });
+  var k = bob.filter(function (b) { return inA[b]; }).length;
+  return {s: s, place: place, alice: alice, bob: bob, k: k, part: cells > GRID * GRID};
+}
+function group(x) { return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
+function num(x, d) {
+  return Math.abs(x - Math.round(x)) < 1e-9 ? group(Math.round(x)) : fmt(x, d);
+}
+
+// Draw: the code base at phase (0: Alice searching, 1: Bob searching, 2:
+// done; acc, the elapsed share of the search), the right panel's view, the
+// lines
+function draw() {
+  var s = camp.s, z = [], codes = [];
+  for (var c = 0; c < GRID * GRID; c++) { codes.push(0); }
+  var bugCell = function (b) { return camp.place[b]; };
+  if (state.reveal) {
+    for (var b = 0; b < s.N; b++) { if (bugCell(b) < GRID * GRID) { codes[bugCell(b)] = 1; } }
+  }
+  var shownA = phase === 0 ? Math.floor(camp.alice.length * acc) : camp.alice.length;
+  var shownB = phase === 0 ? 0 : phase === 1 ? Math.floor(camp.bob.length * acc) : camp.bob.length;
+  var inA = {};
+  camp.alice.slice(0, shownA).forEach(function (b) {
+    inA[b] = true;
+    if (bugCell(b) < GRID * GRID) { codes[bugCell(b)] = 2; }
+  });
+  camp.bob.slice(0, shownB).forEach(function (b) {
+    if (bugCell(b) < GRID * GRID) { codes[bugCell(b)] = inA[b] ? 4 : 3; }
+  });
+  for (var r = 0; r < GRID; r++) { z.push(codes.slice(r * GRID, (r + 1) * GRID)); }
+  var k = camp.k, done = phase === 2;
+  var title = LEFT_TITLES[camp.part ? 1 : 0] + (done ? ": " + group(k) + " found twice" :
+    phase === 0 ? ": Alice is testing…" : ": Bob is testing…");
+  Plotly.update(gd, {z: [z]}, {"annotations[0].text": title}, [TR.cells]);
+  drawView();
+  stats();
+}
+// The right panel: the overlap's PMFs (and the observed k), or the values of
+// N^ with their probabilities
+function drawView() {
+  var s = camp.s, hg = hgeom(s), bi = binom(s), ks = [];
+  for (var k = 0; k <= s.n; k++) { ks.push(k); }
+  var probs = state.easy ? sim : hg, layout = {};
+  var top = 0;
+  if (state.view === 0) {
+    var lo = s.n, hi = 0;
+    ks.forEach(function (k) {
+      if (Math.max(hg[k], bi[k], state.easy ? sim[k] : 0) > 1e-4) { lo = Math.min(lo, k); hi = Math.max(hi, k); }
+      top = Math.max(top, hg[k], bi[k], state.easy ? sim[k] : 0);
+    });
+    var kObs = phase === 2 ? [camp.k, camp.k] : [], yObs = phase === 2 ? [0, top * 1.08] : [];
+    Plotly.restyle(gd, {
+      x: [ks, ks, state.easy ? ks : [], kObs],
+      y: [hg, bi, state.easy ? sim : [], yObs]
+    }, [TR.hgeom, TR.binom, TR.sim, TR.observed]);
+    layout["xaxis2.range"] = [lo - 0.6, hi + 0.6];
+    layout["xaxis2.dtick"] = niceStep(hi - lo + 1);
+  } else {
+    var x = [], y = [];
+    for (k = 1; k <= s.n; k++) {
+      if (probs[k] > 1e-5) { x.push(s.m * s.n / k); y.push(probs[k]); top = Math.max(top, probs[k]); }
+    }
+    Plotly.restyle(gd, {x: [x, [s.N, s.N]], y: [y, [0, top * 1.08]]}, [TR.est, TR.truth]);
+    layout["xaxis2.range"] = [0, 3 * s.N];
+    layout["xaxis2.dtick"] = niceStep(3 * s.N);
+  }
+  var yTop = Math.max(0.1, Math.ceil(top * 1.15 / 0.05) * 0.05);
+  layout["yaxis2.range"] = [0, yTop];
+  layout["yaxis2.dtick"] = niceStep(yTop * 10) / 10;
+  Plotly.relayout(gd, layout);
+}
+function niceStep(span) {
+  var raw = span / 6, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p;
+  return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p;
+}
+// The lines: the campaign and its estimate; the view's figures
+function stats() {
+  var s = camp.s, k = camp.k, hg = hgeom(s), bi = binom(s);
+  var est = k ? s.m * s.n / k : null, found = s.m + s.n - k;
+  var line1 = "Alice: <b>" + group(s.m) + "</b>, Bob: <b>" + group(s.n) + "</b>, both: <b>" +
+    group(k) + "</b> → " + (k ? "<i>N</i>̂ = " + group(s.m) + "·" + group(s.n) + "/" + group(k) +
+    " = <b>" + num(est, 1) + "</b> bugs (true: " + group(s.N) + "); still hidden: about " +
+    num(Math.max(est - found, 0), 1) + " (true: " + group(s.N - found) + ")" :
+    "no bug in common, no estimate");
+  var line2;
+  if (state.view === 0) {
+    var tv = 0;
+    hg.forEach(function (v, i) { tv += Math.abs(v - bi[i]); });
+    line2 = "Mean of <i>K</i>: <i>nm</i>/<i>N</i> = " + fmt(s.n * s.m / s.N, 2) +
+      " for both; variance ratio HGeom/Bin = (<i>N</i> − <i>n</i>)/(<i>N</i> − 1) = " +
+      fmt(s.N > 1 ? (s.N - s.n) / (s.N - 1) : 0, 3) +
+      '; distance between the laws: <b class="anim-ref">' + fmt(tv / 2, 3) + "</b>";
+  } else {
+    var probs = state.easy ? sim : hg, cum = 0, med = null;
+    for (var j = s.n; j >= 1; j--) {
+      cum += probs[j];
+      if (med === null && cum >= 0.5) { med = s.m * s.n / j; }
+    }
+    line2 = (state.easy ? "Simulated (" + group(M_SIM) + " campaigns): " : "Exact: ") +
+      "<i>P</i>(<i>K</i> = 0) = " + fmt(probs[0], 3) + ", no estimate; median of <i>N</i>̂: " +
+      '<b class="anim-ref">' + (med === null ? "–" : num(med, 1)) + "</b> (true: " + group(s.N) + ")";
+  }
+  readout.innerHTML = "<span>" + line1 + "</span><span>" + line2 + "</span>";
+}
+// After a change: a new campaign, shown done (and the simulation of easy and
+// hard bugs)
+function redraw() {
+  stop();
+  var s = setting();
+  camp = campaign(s);
+  sim = state.easy ? simulate(s) : null;
+  phase = 2;
+  draw();
+}
+function placeAll() {}
+function selectLaw(d) { showLaw(d); show(); redraw(); }
+
+// N (log scale) and Bob's finds n: sliders of the header row
+function own(label, min, max, value, onInput) {
+  var el = document.createElement("label"), input = document.createElement("input"),
+    out = document.createElement("output");
+  el.className = "anim-own";
+  el.innerHTML = label;
+  input.type = "range";
+  input.min = min;
+  input.max = max;
+  input.step = 1;
+  input.value = value;
+  el.appendChild(input);
+  el.appendChild(out);
+  header.querySelector(".anim-row").appendChild(el);
+  input.addEventListener("input", function () { onInput(Number(input.value)); });
+  return {input: input, out: out};
+}
+var nSlider = own("Bugs <i>N</i>", 0, N_VALUES.length - 1, state.ni, function (v) {
+  state.ni = v;
+  showOwn();
+  redraw();
+});
+var bobSlider = own("Bob finds <i>n</i>", 1, N_BOB_MAX, state.n, function (v) {
+  state.n = v;
+  showOwn();
+  redraw();
+});
+function showOwn() {
+  nSlider.out.innerHTML = group(N_VALUES[state.ni]);
+  bobSlider.out.innerHTML = group(Math.min(state.n, N_VALUES[state.ni]));
+}
+header.querySelector(".anim-reset").addEventListener("click", function () {
+  state.ni = DEFAULTS_OWN.ni;
+  state.n = DEFAULTS_OWN.n;
+  nSlider.input.value = state.ni;
+  bobSlider.input.value = state.n;
+  showOwn();
+  redraw();
+});
+
+// Footer: a new campaign; the difficulty, the hidden bugs, the view
+footer.querySelector(".anim-new").addEventListener("click", function () {
+  stop();
+  camp = campaign(setting());
+  phase = 2;
+  draw();
+});
+var noteEl = footer.querySelector(".anim-note");
+toggle(footer.querySelectorAll(".anim-easy button"), state.easy, function (v) {
+  state.easy = v;
+  noteEl.hidden = !v;
+  redraw();
+});
+toggle(footer.querySelectorAll(".anim-reveal button"), state.reveal, function (v) {
+  state.reveal = v;
+  draw();
+});
+// View of the right panel (state.view: 0, overlap; 1, estimate): its traces
+// (META: the view of each, null for both panels) and titles
+function show() {
+  var vis = META.map(function (v) { return v === null || v === state.view; });
+  Plotly.restyle(gd, {visible: vis}, META.map(function (v, i) { return i; }));
+  Plotly.relayout(gd, VIEWS[state.view]);
+}
+toggle(footer.querySelectorAll(".anim-view button"), state.view, function (v) {
+  state.view = v;
+  show();
+  draw();
+});
+
+// Play: a new campaign, Alice's search then Bob's (SEARCH_MS each); pause
+// shows it done
+function stop() {
+  if (playing || phase < 2) { phase = 2; playing = false; last = null; if (camp) { draw(); } }
+}
+function frame(now) {
+  if (!playing) { return; }
+  if (last !== null) {
+    acc += (now - last) / SEARCH_MS;
+    if (acc >= 1) { acc = 0; phase++; }
+    draw();
+    if (phase >= 2) { playing = false; last = null; return; }
+  }
+  last = now;
+  requestAnimationFrame(frame);
+}
+function play() {
+  if (playing) { return; }
+  camp = campaign(setting());
+  phase = 0;
+  acc = 0;
+  playing = true;
+  last = null;
+  draw();
+  requestAnimationFrame(frame);
+}
+footer.querySelector(".anim-play").addEventListener("click", play);
+footer.querySelector(".anim-pause").addEventListener("click", stop);
+// Space plays or pauses (not when a list or button has the focus: it acts on
+// it)
+document.addEventListener("keydown", function (e) {
+  var tag = (e.target.tagName || "").toLowerCase();
+  if (e.code !== "Space" || tag === "select" || tag === "button" || tag === "input") {
+    return;
+  }
+  e.preventDefault();
+  (playing ? stop : play)();
+});
+
+// Start: the generator, the sliders' values, the layout
+random = generator();
+noteEl.hidden = !state.easy;
+showOwn();
+start();
+
+                        })                };            </script>        </div>
+</body>
+</html>
