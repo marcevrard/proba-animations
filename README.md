@@ -36,6 +36,7 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   For comparison, switch to the Weibull distribution, in the form $P(X \ge x) = e^{-\lambda x^\gamma}$.
   It has less time left for $\gamma > 1$ (wear) and more for $\gamma < 1$ (survival of the fittest).
   Another toggle shows the hazard rate, which is flat for the exponential distribution because it does not age.
+  A note links $\mathrm{Exp}(\lambda)$ to the Poisson process: it is the wait for the first event, since $X > t \iff N_t = 0$ with $N_t \sim \mathrm{Pois}(\lambda t)$.
   Add `#exp` or `#weibull` to the URL to choose the starting distribution.
 
 - **[Memoryless property: raindrops](https://marcevrard.github.io/proba-animations/raindrops/raindrops.html)**
@@ -45,6 +46,9 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   The time already waited, $s$, changes how many tiles are still dry, but not the law of their remaining wait.
   A table compares the tiles still dry at $s$ with all tiles: the same share gets its drop within one second, and the mean wait is $1/\lambda$ for both.
   Three views show it: the histograms of the waits, the share still dry $t$ later, and the mean wait against $s$.
+  The drops on a tile form a Poisson process, as a note says.
+  A fourth view counts the drops per tile after $s$ seconds of rain (or the time of the play), against $\mathrm{Pois}(\lambda t)$.
+  Its bar at 0 drops is the share of tiles still dry.
   The number of tiles ranges from 4 to 100,000 (the default).
   With few tiles, the statistics are noisy.
   As the number grows, the mean wait against $s$ flattens to $1/\lambda$.
