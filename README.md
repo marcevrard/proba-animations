@@ -6,9 +6,19 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
 **Open them at <https://marcevrard.github.io/proba-animations/>.**
 
 The site follows the course, Modules 1 to 5.
-The animations below all belong to Module 4, Continuous random variables.
 
 ## Animations
+
+### Module 1: Counting
+
+- **[The birthday problem](https://marcevrard.github.io/proba-animations/module1/birthday/birthday.html)**
+
+  This page shows how likely it is that at least two of $n$ people share a birthday, $P(A) = 1 - \frac{365 \cdot 364 \cdots (365 - n + 1)}{365^n}$, with 365 equally likely days.
+  A class fills a calendar person by person, and shared days turn orange.
+  Beside it, $P(A)$ is plotted against $n$, with the share of 10,000 simulated classes: an even chance from 23 people.
+  The $\binom{n}{2}$ pairs explain why it grows so fast, unlike the chance that someone shares *my* birthday, $1 - (364/365)^{n-1}$.
+
+### Module 4: Continuous random variables
 
 - **[PDF and CDF](https://marcevrard.github.io/proba-animations/module4/pdf-cdf/pdf-cdf.html)**
 
@@ -58,6 +68,8 @@ The animations below all belong to Module 4, Continuous random variables.
   The pavement shows every tile up to $40 \times 40$, and a $40 \times 40$ part beyond.
 
 ## Using the pages
+
+- In the birthday page, drag $n$ along the axis or press play, and draw a new class.
 
 - In the PDF and CDF page, drag the dots on the axes.
 
