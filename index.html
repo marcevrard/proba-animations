@@ -4,95 +4,56 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Probability: interactive animations</title>
-  <!-- Landing page of resources/animations/, maintained by hand: one section
-       per animation folder (GitHub Pages serves it as the site's home). -->
+  <!-- Home page of resources/animations/ (GitHub Pages serves it as the
+       site's home), maintained by hand: one card per module of the course
+       (chapter N = module N); a module with animations has its folder,
+       moduleN/, with its own index.html. -->
   <style>
     body {max-width: 680px; margin: 48px auto; padding: 0 20px;
       font-family: Latin Modern Sans, CMU Sans Serif, Helvetica Neue, Arial, sans-serif;
       color: #242424; line-height: 1.5;}
     h1 {font-size: 28px; font-weight: normal; margin-bottom: 4px;}
-    h2 {font-size: 22px; font-weight: normal; margin: 36px 0 4px;}
     .lead {color: #555; margin-top: 0;}
-    a.card {display: block; margin: 18px 0; padding: 16px 20px;
+    .card {display: block; margin: 18px 0; padding: 16px 20px;
       border: 1px solid #ddd; border-left: 6px solid #1f77b4;
       border-radius: 8px; color: inherit; text-decoration: none;}
     a.card:hover {background: #f6f9fc;}
-    a.card strong {font-size: 19px; font-weight: normal; color: #1f77b4;}
-    a.card span {display: block; color: #555;}
+    .card strong {font-size: 19px; font-weight: normal; color: #1f77b4;}
+    .card span {display: block; color: #555;}
+    .card.empty {border-left-color: #ccc;}
+    .card.empty strong, .card.empty span {color: #999;}
   </style>
 </head>
 <body>
   <h1>Probability: interactive animations</h1>
-  <p class="lead">Play, pause, or drag the slider; each animation has its own
-  options.</p>
+  <p class="lead">Interactive animations of an undergraduate probability
+  course, by module.</p>
 
-  <section>
-    <h2>PDF and CDF</h2>
-    <a class="card" href="pdf-cdf/pdf-cdf.html">
-      <strong><i>F</i>(<i>x</i>) = <i>P</i>(<i>X</i> ≤ <i>x</i>)</strong>
-      <span>Drag <i>x</i> along the axis of the PDF or of the CDF, or a
-      probability along the CDF: the CDF at <i>x</i> is the area under the
-      PDF up to <i>x</i>. <i>X</i> follows a normal, logistic, exponential or
-      uniform distribution, with its parameters, PDF, CDF and quantile
-      function. Switch to an interval, <i>P</i>(<i>x</i><sub>1</sub> &lt;
-      <i>X</i> ≤ <i>x</i><sub>2</sub>) = <i>F</i>(<i>x</i><sub>2</sub>) −
-      <i>F</i>(<i>x</i><sub>1</sub>), or zoom on <i>x</i> to see a narrow
-      density.</span>
-    </a>
-  </section>
+  <div class="card empty">
+    <strong>Module 1: Counting</strong>
+    <span>No animations yet.</span>
+  </div>
 
-  <section>
-    <h2>Universality of the uniform</h2>
-    <a class="card" href="uniform-universality/universality.html">
-      <strong><i>X</i> = <i>F</i><sup>−1</sup>(<i>U</i>) and
-      <i>F</i>(<i>X</i>) ∼ Unif(0, 1)</strong>
-      <span>Quantiles projected through the quantile function of <i>X</i>,
-      or through its CDF: the points gather where the density is high, or
-      spread evenly over (0, 1). <i>X</i> follows a normal, logistic,
-      exponential or uniform distribution, with its PDF, CDF and quantile
-      function. A switch goes from one direction to the other, mirroring the
-      curve and swapping the two densities; choose the quantiles, the mode and
-      the unit.</span>
-    </a>
-  </section>
+  <div class="card empty">
+    <strong>Module 2: Conditional probability</strong>
+    <span>No animations yet.</span>
+  </div>
 
-  <section>
-    <h2>Memoryless property</h2>
-    <a class="card" href="memoryless/memoryless.html">
-      <strong><i>P</i>(<i>X</i> ≥ <i>s</i> + <i>t</i> | <i>X</i> ≥ <i>s</i>) =
-      <i>P</i>(<i>X</i> ≥ <i>t</i>)</strong>
-      <span>After waiting <i>s</i>, the remaining time keeps the law of
-      <i>X</i> ∼ Exp(λ): its density, the tail beyond <i>s</i> moved back
-      to 0 and scaled up, is the density of <i>X</i> again. Press play to
-      let <i>s</i> grow, or drag <i>s</i> and <i>t</i>. Show the survival
-      functions, <i>S</i>(<i>x</i>) = <i>P</i>(<i>X</i> ≥ <i>x</i>), instead
-      of the densities: probabilities become heights, and the curve of the
-      remaining time lies on that of <i>X</i>. Switch to Weibull(λ, γ) to
-      see wear (γ &gt; 1, less time left) or the survival of the fittest
-      (γ &lt; 1, more time left), and show the hazard rate: flat for Exp,
-      which does not age, rising with wear. A note links Exp(λ) to the
-      Poisson process: it is the wait for its first event.</span>
-    </a>
-  </section>
+  <div class="card empty">
+    <strong>Module 3: Discrete random variables</strong>
+    <span>No animations yet.</span>
+  </div>
 
-  <section>
-    <h2>Memoryless property: raindrops</h2>
-    <a class="card" href="raindrops/raindrops.html">
-      <strong>Do the tiles still dry get their drop sooner?</strong>
-      <span>Rain starts on a pavement, and each tile gets drops at rate λ: its
-      wait for the first one follows Exp(λ). Move <i>s</i>, the time already
-      waited: fewer tiles are still dry, but their remaining wait keeps the
-      same law. A table compares them with all tiles: the same share gets its
-      drop within a second, with the same mean wait, 1/λ. Three views show
-      it: the histograms of the waits, the share still dry <i>t</i> later
-      (the curves lie on each other), and the mean wait against <i>s</i>,
-      flat, where a drop that was due would come sooner and sooner. The
-      drops on a tile form a Poisson process: a fourth view counts them,
-      against Pois(λ<i>t</i>), and its bar at 0 drops is the share still
-      dry. With
-      fewer tiles (from 100,000 down to 4), the noise shows. Press play to
-      watch the shower, or draw a new one.</span>
-    </a>
-  </section>
+  <a class="card" href="module4/index.html">
+    <strong>Module 4: Continuous random variables</strong>
+    <span>PDF and CDF, universality of the uniform, memoryless property
+    (densities and survival functions, Weibull), raindrops and the Poisson
+    process.</span>
+  </a>
+
+  <div class="card empty">
+    <strong>Module 5: Expectation and limit theorems</strong>
+    <span>No animations yet.</span>
+  </div>
 </body>
 </html>

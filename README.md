@@ -5,9 +5,12 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
 
 **Open them at <https://marcevrard.github.io/proba-animations/>.**
 
+The site follows the course, Modules 1 to 5.
+The animations below all belong to Module 4, Continuous random variables.
+
 ## Animations
 
-- **[PDF and CDF](https://marcevrard.github.io/proba-animations/pdf-cdf/pdf-cdf.html)**
+- **[PDF and CDF](https://marcevrard.github.io/proba-animations/module4/pdf-cdf/pdf-cdf.html)**
 
   This page shows that $F_X(x) = P(X \le x)$ is the area under the PDF up to $x$ and the height of the CDF at $x$.
   You can drag $x$ along the axis of the PDF or of the CDF, or drag a probability along the axis of the CDF.
@@ -17,7 +20,7 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   A zoom on $x$ helps with narrow densities.
   Add `#norm`, `#logis`, `#expon`, or `#unif` to the URL to choose the starting distribution.
 
-- **[Universality of the uniform](https://marcevrard.github.io/proba-animations/uniform-universality/universality.html)**
+- **[Universality of the uniform](https://marcevrard.github.io/proba-animations/module4/uniform-universality/universality.html)**
 
   This animation shows both directions of the theorem, $X = F^{-1}(U)$ and $F(X) \sim \mathrm{Unif}(0, 1)$.
   Quantiles of $U$ are projected through the quantile function of $X$ and gather where its density is high.
@@ -27,7 +30,7 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   The curve is dashed outside the support of $X$, where the CDF is flat at 0 or 1.
   Add `#quantile` or `#cdf` to the URL to choose the starting direction.
 
-- **[Memoryless property](https://marcevrard.github.io/proba-animations/memoryless/memoryless.html)**
+- **[Memoryless property](https://marcevrard.github.io/proba-animations/module4/memoryless/memoryless.html)**
 
   This page shows the memoryless property of $X \sim \mathrm{Exp}(\lambda)$, $P(X \ge s + t \mid X \ge s) = P(X \ge t)$.
   After waiting $s$, the density of the remaining time is the density of $X$ again, whatever $s$.
@@ -39,7 +42,7 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
   A note links $\mathrm{Exp}(\lambda)$ to the Poisson process: it is the wait for the first event, since $X > t \iff N_t = 0$ with $N_t \sim \mathrm{Pois}(\lambda t)$.
   Add `#exp` or `#weibull` to the URL to choose the starting distribution.
 
-- **[Memoryless property: raindrops](https://marcevrard.github.io/proba-animations/raindrops/raindrops.html)**
+- **[Memoryless property: raindrops](https://marcevrard.github.io/proba-animations/module4/raindrops/raindrops.html)**
 
   This page shows the same property with a simulated shower.
   Each tile of a pavement gets drops at rate $\lambda$, so its wait for the first drop follows $\mathrm{Exp}(\lambda)$.
@@ -73,9 +76,11 @@ Each animation is a standalone web page built with [Plotly](https://plotly.com/j
 ## Layout
 
 ```text
-index.html                   landing page, one section per animation
-plotly.min.js                Plotly library shared by all pages
-<animation>/<page>.html      one folder per animation
+index.html                          landing page, one card per module
+plotly.min.js                       Plotly library shared by all pages
+module<N>/index.html                the animations of a module
+module<N>/<animation>/<page>.html   one folder per animation
+<animation>/<page>.html             redirects from the old paths (printed QR codes)
 ```
 
 ## How the pages are made
